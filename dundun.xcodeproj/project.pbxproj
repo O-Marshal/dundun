@@ -187,6 +187,7 @@
 		A9EE06B81CB66341002B6CAD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5ABAB911CB7C31900EEDFC7 /* shop */,
 				A9323E801CB68F6B00FE8E1C /* ViewController.swift */,
 				A9EE06C11CB675EF002B6CAD /* Login */,
 			);
@@ -274,6 +275,13 @@
 				A9323E7E1CB68F5100FE8E1C /* ExtensionUIviewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B5ABAB911CB7C31900EEDFC7 /* shop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = shop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
