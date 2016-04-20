@@ -14,14 +14,55 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="HzB-vK-2T6">
+                                <rect key="frame" x="112" y="100" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="G3l-GZ-8bJ"/>
+                                    <constraint firstAttribute="width" constant="150" id="ZwA-e0-tVa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pXc-Jd-rHX"/>
+                                    <constraint firstAttribute="height" constant="150" id="xGZ-ep-ZSd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G3l-GZ-8bJ"/>
+                                        <exclude reference="pXc-Jd-rHX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUNDUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1Z-wq-EBf">
+                                <rect key="frame" x="134" y="290" width="106.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.50313696982903178" green="0.68367711462981573" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2016 盾盾科技版权所有" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnx-Fb-1Io">
+                                <rect key="frame" x="89" y="621" width="197.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g1Z-wq-EBf" firstAttribute="top" secondItem="HzB-vK-2T6" secondAttribute="bottom" constant="40" id="FAX-qk-D9Q"/>
+                            <constraint firstItem="HzB-vK-2T6" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="OPp-IW-md5"/>
+                            <constraint firstItem="HzB-vK-2T6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dcT-Cf-I1K"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pnx-Fb-1Io" secondAttribute="bottom" constant="25" id="mFM-kV-bjH"/>
+                            <constraint firstItem="pnx-Fb-1Io" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sFo-jr-TKx"/>
+                            <constraint firstItem="g1Z-wq-EBf" firstAttribute="centerX" secondItem="HzB-vK-2T6" secondAttribute="centerX" id="wgK-PZ-0mx"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_logo" width="512" height="512"/>
+    </resources>
 </document>

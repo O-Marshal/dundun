@@ -16,10 +16,24 @@ extension UIViewController {
         }
         if navigationController == nil { // 当前控制器没有导航控制器，则执行Dismiss方法
             dismissViewControllerAnimated(true, completion: nil)
-        } else if self == navigationController {//  如果当前控制器是导视图的根视图，且不是UIWindow的根视图，就Dismiss掉当前导航控制器
+        } else if self == navigationController?.childViewControllers.first {//  如果当前控制器是导视图的根视图，且不是UIWindow的根视图，就Dismiss掉当前导航控制器
             navigationController?.dismissViewControllerAnimated(true, completion: nil)
         } else {//  否则返回到上一个导航控制器
             navigationController?.popViewControllerAnimated(true)
         }
+    }
+}
+
+extension UIViewController {
+    /**
+     重写NavgationBar返回按钮样式
+     */
+    func initCommonNavBackItem(image: String = "nav_back") {
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: image), style: .Plain, target: self, action: #selector(dismissEvent))
+    }
+    
+    func addsubView(targetView: UIView) {
+        view.addSubview(targetView)
     }
 }

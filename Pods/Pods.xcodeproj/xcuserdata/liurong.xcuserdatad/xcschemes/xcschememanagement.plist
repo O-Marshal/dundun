@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RxCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Whisper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>25F9F1D9857DDA8501939EF8F297A6C9</key>
+		<key>6E6AB7088205E842D989D5B9BD5C5342</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34164F5A92067F8A435D205F6A3EDD6C</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73218F2FA5E25FEBDC6511ADD2235F8D</key>
+		<key>8830243836EFB5E7AEBAD8ADC1AC7EC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E583FF0415B7227CCA84A3B32C903A1F</key>
+		<key>8E0EC7BDF4287AF3DFB2E4420E72AEB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

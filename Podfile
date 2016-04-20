@@ -3,5 +3,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod ‘SnapKit’
-pod ‘RxSwift’
-pod ‘RxCocoa’
+pod ‘Alamofire’
+pod ‘Whisper’
+pod 'UMengAnalytics-NO-IDFA'

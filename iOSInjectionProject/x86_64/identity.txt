@@ -1,0 +1,2 @@
+/Users/liurong/Library/Developer/Xcode/DerivedData/dundun-finkhefrlhvaquachhlsstoecbtq/Build/Products/Debug-iphonesimulator/dundun.app
+

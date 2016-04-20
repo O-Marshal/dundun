@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import SnapKit
 
-class LoginTextFieldGroup: UIView {
+class LoginTextFieldGroup: UIView, UITextFieldDelegate {
     
     
     private var topView: UIView?
     private var topOffset: CGFloat = 0
     private var icon = ""
+    private var placeholder = ""
     
-    func initGroup(topView: UIView?, topOffset: CGFloat, icon: String) -> LoginTextFieldGroup {
+    var value = ""
+    
+    
+    func initGroup(topView: UIView?, topOffset: CGFloat, icon: String, placeholder: String = "请输入内容") -> LoginTextFieldGroup {
         self.topView = topView
         self.topOffset = topOffset
         self.icon = icon
-        //        self.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.1)
+        self.placeholder = placeholder
         return self
     }
     
@@ -41,9 +46,10 @@ class LoginTextFieldGroup: UIView {
         }
         
         let textFiled = UITextField()
-        textFiled.attributedPlaceholder = NSAttributedString(string: "请输入手机号码", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        textFiled.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         textFiled.textColor = UIColor.whiteColor()
         textFiled.font = UIFont.boldSystemFontOfSize(18)
+        textFiled.delegate = self
         addSubview(textFiled)
         textFiled.snp_makeConstraints { (make) in
             make.left.equalTo(iconView.snp_right).offset(10)
@@ -51,14 +57,6 @@ class LoginTextFieldGroup: UIView {
             make.right.equalTo(self).offset(-10)
         }
         
-        let lineView = UIView()
-        addSubview(lineView)
-        lineView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
-        //        lineView.transform = CGAffineTransformMakeScale(1, 0.5)
-        lineView.snp_makeConstraints { (make) in
-            make.left.right.equalTo(self)
-            make.height.equalTo(0.5)
-            make.bottom.equalTo(self).offset(-1)
-        }
+        addSubview(Line.defaultLine(0, color: MColor.lineLoginColor))
     }
 }
