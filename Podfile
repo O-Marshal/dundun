@@ -6,3 +6,4 @@ pod ‘SnapKit’
 pod ‘Alamofire’
 pod ‘Whisper’
 pod 'UMengAnalytics-NO-IDFA'
+pod ‘SwiftyJSON’

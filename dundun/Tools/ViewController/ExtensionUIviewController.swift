@@ -33,7 +33,20 @@ extension UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: image), style: .Plain, target: self, action: #selector(dismissEvent))
     }
     
+    func changeScrollView() {
+        let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
+        scrollView.addSubview(view)
+        scrollView.contentSize = CGSize(width: 0, height: 700)
+        scrollView.backgroundColor = MColor.themeColor
+        view = scrollView
+    }
+}
+
+//  事件相关
+extension UIViewController {
+    
     func addsubView(targetView: UIView) {
         view.addSubview(targetView)
     }
+    
 }

@@ -14,4 +14,24 @@ class LoginController {
         let controller = MNavigationController(rootViewController: LoginViewController())
         viewController.presentViewController(controller, animated: true, completion: nil)
     }
+    
+    class func userSave(userId: Int, token: String) {
+        let user = NSUserDefaults.standardUserDefaults()
+        user.setInteger(userId, forKey: "userId")
+        user.setObject(token, forKey: "userToken")
+        user.synchronize()
+    }
+    
+    /**
+     获取用户信息
+     
+     - returns: 返回用户信息：字典
+     */
+    class func userInfo() -> [String: AnyObject] {
+        let user = NSUserDefaults.standardUserDefaults()
+        let userID = user.integerForKey("userId")
+        let userToken = user.objectForKey("userToken")
+        return ["userID": userID, "userToken": userToken!]
+    }
+    
 }

@@ -32,7 +32,7 @@ class MSize {
     }
     
     func px(size: Int) -> CGFloat {
-        return CGFloat(size) / scale + 0.1
+        return CGFloat(size) / scale
     }
     
     func scrollHeight(height: CGFloat) -> CGFloat {

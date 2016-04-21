@@ -17,7 +17,7 @@ class LoginTextFieldGroup: UIView, UITextFieldDelegate {
     private var icon = ""
     private var placeholder = ""
     
-    var value = ""
+    var textFiled = UITextField()
     
     
     func initGroup(topView: UIView?, topOffset: CGFloat, icon: String, placeholder: String = "请输入内容") -> LoginTextFieldGroup {
@@ -25,6 +25,11 @@ class LoginTextFieldGroup: UIView, UITextFieldDelegate {
         self.topOffset = topOffset
         self.icon = icon
         self.placeholder = placeholder
+        return self
+    }
+    
+    func isPassword() -> LoginTextFieldGroup {
+        textFiled.secureTextEntry = true
         return self
     }
     
@@ -37,15 +42,13 @@ class LoginTextFieldGroup: UIView, UITextFieldDelegate {
             make.height.equalTo(60)
         }
         
-        let iconView = UIImageView()
-        iconView.image = UIImage(named: icon)
-        addSubview(iconView)
+        let iconView = UIImageView(image: UIImage(named: icon)).addTo(self)
         iconView.snp_makeConstraints { (make) in
             make.left.top.equalTo(self).offset(15)
             make.height.width.equalTo(30)
         }
         
-        let textFiled = UITextField()
+        textFiled.addTo(self)
         textFiled.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         textFiled.textColor = UIColor.whiteColor()
         textFiled.font = UIFont.boldSystemFontOfSize(18)
