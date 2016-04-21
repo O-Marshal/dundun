@@ -86,4 +86,18 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
     override func viewWillDisappear(animated: Bool) {
         MobClick.endLogPageView("\(classForCoder)")
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        dismissKeyBoard(view)
+    }
+    /** 影藏键盘 */
+    internal func dismissKeyBoard(mView: UIView){
+        if mView.isKindOfClass(UITextField) || mView.isKindOfClass(UITextView) {
+            (mView as! UITextField).resignFirstResponder()
+        }
+        if mView.subviews.count == 0 { return }
+        for subview in mView.subviews{
+            dismissKeyBoard(subview)
+        }
+    }
 }

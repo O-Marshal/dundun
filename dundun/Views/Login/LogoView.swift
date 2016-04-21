@@ -13,7 +13,7 @@ class LogoView: UILabel {
     class func defaultLogo() -> UILabel {
         let logo = LogoView()
         logo.text = "DUNDUN"
-        logo.font = UIFont.boldSystemFontOfSize(50)
+        logo.font = UIFont.boldSystemFontOfSize(autoSize(40, max: 50))
         logo.textColor = UIColor.whiteColor()
         return logo
     }
@@ -21,7 +21,8 @@ class LogoView: UILabel {
     override func didMoveToSuperview() {
         if superview == nil { return }
         snp_makeConstraints { (make) in
-            make.top.equalTo(80)
+            //  6p - 80
+            make.top.equalTo(autoSize(30, max: 80))
             make.centerX.equalTo(superview!)
         }
     }

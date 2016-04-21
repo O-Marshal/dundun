@@ -35,6 +35,18 @@ class MSize {
         return CGFloat(size) / scale
     }
     
+    func autoSize(min: CGFloat, max: CGFloat) -> CGFloat {
+        return width > 320 ? max :min
+    }
+    
+    func spDefaultTextfiled() -> CGFloat {
+        return autoSize(12, max: 14)
+    }
+    
+    var isMinScreen: Bool {
+        return width < 350
+    }
+    
     func scrollHeight(height: CGFloat) -> CGFloat {
         if height > self.height { return height + 10 }
         return self.height + 10

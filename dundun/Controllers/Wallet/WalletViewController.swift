@@ -23,7 +23,8 @@ class WalletViewController: BaseViewController {
     }
     
     func load() {
-        print(LoginController.userInfo())
+//        print(LoginController.userInfo())
+        LoginController.login(self)
     }
 
 }

@@ -21,32 +21,32 @@ class RepassViewController: BaseViewController {
     
     override func initView() {
         title = "重置密码"
+        view.backgroundColor = MColor.themeColor
+        let logo = LogoView.defaultLogo().addTo(view)
         
-        let logo = LogoView.defaultLogo()
-        addsubView(logo)
-        
-        view.addSubview(phoTextField.initGroup(logo, topOffset: 60, icon: "tx_pho"))
-        view.addSubview(smsTextField.initGroup(phoTextField, topOffset: 10, icon: "tx_sms"))
-        view.addSubview(psdTextField.initGroup(smsTextField, topOffset: 10, icon: "tx_psd"))
+        phoTextField.initGroup(logo, topOffset: autoSize(30, max: 60), icon: "tx_pho", placeholder: "请输入 11 位手机号码").addTo(view)
+        smsTextField.initGroup(phoTextField, topOffset: autoSize(5, max: 10), icon: "tx_sms", placeholder: "请输入短信验证码").addTo(view)
+        psdTextField.initGroup(smsTextField, topOffset: autoSize(5, max: 10), icon: "tx_psd", placeholder: "请设置 6 - 20 的密码").addTo(view)
         
         
         
         smsBtn = MButton.whiteButton("获取验证码", target: self, action: #selector(sms)).addTo(view).btnView
+        if MSize.defaultSize.isMinScreen {
+            let attrTitle = NSAttributedString(string: "获取验证码", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(14), NSForegroundColorAttributeName: MColor.themeColor])
+            smsBtn.setAttributedTitle(attrTitle, forState: .Normal)
+        }
+        smsBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: autoSize(15, max: 20), bottom: 0, right: autoSize(15, max: 20))
         smsBtn.snp_makeConstraints { (make) in
-            make.top.equalTo(phoTextField).offset(8)
-            make.right.equalTo(phoTextField)
-            make.width.equalTo(120)
-            make.height.equalTo(40)
+            make.right.bottom.equalTo(phoTextField)
+            make.height.equalTo(autoSize(30, max: 40))
         }
         btn = MButton.whiteButton("登       录", target: self, action: #selector(repass)).addTo(view).btnView
         btn.snp_makeConstraints { (make) in
-            make.top.equalTo(psdTextField.snp_bottom).offset(50)
+            make.top.equalTo(psdTextField.snp_bottom).offset(autoSize(35, max: 50))
             make.left.equalTo(view).offset(40)
             make.right.equalTo(view).offset(-40)
-            make.height.equalTo(50)
+            make.height.equalTo(40)
         }
-        
-        changeScrollView()
     }
     
     override func netSuccess(result: String, identifier: String?) {
@@ -83,6 +83,7 @@ class RepassViewController: BaseViewController {
 extension RepassViewController {
     
     func sms(sender: UIButton) {
+        dismissKeyBoard(view)
         let userName = phoTextField.textFiled.text ?? ""
         if !validateUsername(userName) {
             return Notify.show(Whisper: "请输入正确的 11 位手机号码", theme: NotiTheme.Warring, viewController: self)
@@ -92,6 +93,7 @@ extension RepassViewController {
     }
     
     func repass() {
+        dismissKeyBoard(view)
         let userName = phoTextField.textFiled.text ?? ""
         let sms = smsTextField.textFiled.text ?? ""
         let passWord = psdTextField.textFiled.text ?? ""
