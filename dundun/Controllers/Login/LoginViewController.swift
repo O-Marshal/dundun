@@ -48,8 +48,9 @@ class LoginViewController: BaseViewController {
     }
     
     override func netSuccess(result: String, identifier: String?) {
-        let json = JSON(data: result.dataUsingEncoding(NSUTF8StringEncoding)!)
-        LoginController.userSave(json["userId"].intValue, token: json["token"].stringValue)
+        let json = MJson.json(result)
+        print(json)
+        LoginController.userSave(json["userId"].intValue, token: json["userToken"].stringValue)
         Notify.show(Murmur: "登录成功", theme: NotiTheme.Success)
         print(LoginController.userInfo())
         dismissEvent()

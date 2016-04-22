@@ -12,20 +12,26 @@ import SwiftyJSON
 
 extension BaseViewController {
     
-    /**
-     get - 网络请求 ： 网络请求都是异步线程， 如果需要在主线程执行回调，请使用async_main方法
-     */
     func get(url: String, identifier: String? = nil) {
         Alamofire.request(.GET, url).responseData { (response) in
             self.result(response, identifier: identifier)
         }
     }
     
-    /**
-     post - 网络请求 ： 网络请求都是异步线程， 如果需要在主线程执行回调，请使用async_main方法
-     */
     func post(url: String, params: [String: AnyObject], identifier: String? = nil) {
         Alamofire.request(.POST, url, parameters: params).responseData(completionHandler: { (response) in
+            self.result(response, identifier: identifier)
+        })
+    }
+    
+    /**
+     postWithLogin - 带用户登录的网络请求
+     */
+    func postWithLogin(url: String, params: [String: AnyObject], identifier: String? = nil) {
+        var newParams = params
+        newParams["userID"] = LoginController.userInfo()["userID"]
+        newParams["userToken"] = LoginController.userInfo()["userToken"]
+        Alamofire.request(.POST, url, parameters: newParams).responseData(completionHandler: { (response) in
             self.result(response, identifier: identifier)
         })
     }

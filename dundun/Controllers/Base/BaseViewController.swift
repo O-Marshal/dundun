@@ -70,6 +70,8 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
      用户需要登录
      */
     func netErrorAuth() {
+        Notify.show(Murmur: "用户校验失败，需要登录", theme: NotiTheme.Warring)
+        LoginController.login(self)
         print("用户授权失败，需要重新登录")
     }
     

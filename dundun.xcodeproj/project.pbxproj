@@ -25,6 +25,7 @@
 		A9323E851CB68F8700FE8E1C /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9323E841CB68F8700FE8E1C /* LoginTextField.swift */; };
 		A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6C1CC9085C0045BE6D /* Size.swift */; };
 		A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */; };
+		A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E711CC9F5210045BE6D /* MJson.swift */; };
 		A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */; };
 		A9594CAD1CC3BB16008CE1DA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */; };
 		A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CB11CC4B640008CE1DA /* LoginController.swift */; };
@@ -100,6 +101,7 @@
 		A9323E841CB68F8700FE8E1C /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		A94A8E6C1CC9085C0045BE6D /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire_ExtensionViewController.swift; sourceTree = "<group>"; };
+		A94A8E711CC9F5210045BE6D /* MJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJson.swift; sourceTree = "<group>"; };
 		A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject_GCD.swift; sourceTree = "<group>"; };
 		A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		A9594CB11CC4B640008CE1DA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				A91FCE321CC8C8E70033305C /* ExtensionSwiftyJSON.swift */,
+				A94A8E711CC9F5210045BE6D /* MJson.swift */,
 			);
 			path = SwiftyJSON;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */,
 				A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */,
 				A9E65B961CC24339009F8116 /* MTabBarController.swift in Sources */,
+				A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */,
 				A9594CBA1CC4BDF3008CE1DA /* Line.swift in Sources */,
 				A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */,
 				A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */,

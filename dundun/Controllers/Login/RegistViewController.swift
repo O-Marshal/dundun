@@ -67,6 +67,11 @@ class RegistViewController: BaseViewController {
         Notify.show(Murmur: "注册成功，请登录", theme: NotiTheme.Success)
         dismissEvent()
     }
+    
+    override func netError(errorType: AlamofireResultType, errorInfo: String, identifier: String?) {
+        super.netError(errorType, errorInfo: errorInfo, identifier: identifier)
+        self.smsBtn.enabled = true
+    }
 }
 
 extension RegistViewController {
