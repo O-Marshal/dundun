@@ -39,19 +39,20 @@ class LoginTextFieldGroup: UIView, UITextFieldDelegate {
             if topView == nil { make.top.equalTo(topOffset) } else { make.top.equalTo(topView!.snp_bottom).offset(topOffset) }
             make.left.equalTo(superview!).offset(20)
             make.right.equalTo(superview!).offset(-20)
-            make.height.equalTo(60)
+            //  6p -- 60
+            make.height.equalTo(autoSize(40, max: 60))
         }
         
         let iconView = UIImageView(image: UIImage(named: icon)).addTo(self)
         iconView.snp_makeConstraints { (make) in
-            make.left.top.equalTo(self).offset(15)
-            make.height.width.equalTo(30)
+            make.left.top.equalTo(self).offset(autoSize(10, max: 15))
+            make.height.width.equalTo(autoSize(20, max: 30))
         }
         
         textFiled.addTo(self)
         textFiled.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         textFiled.textColor = UIColor.whiteColor()
-        textFiled.font = UIFont.boldSystemFontOfSize(18)
+        textFiled.font = UIFont.boldSystemFontOfSize(autoSize(12, max: 14))
         textFiled.delegate = self
         addSubview(textFiled)
         textFiled.snp_makeConstraints { (make) in

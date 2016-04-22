@@ -12,20 +12,26 @@ import SwiftyJSON
 
 extension BaseViewController {
     
-    /**
-     get - 网络请求 ： 网络请求都是异步线程， 如果需要在主线程执行回调，请使用async_main方法
-     */
     func get(url: String, identifier: String? = nil) {
         Alamofire.request(.GET, url).responseData { (response) in
             self.result(response, identifier: identifier)
         }
     }
     
-    /**
-     post - 网络请求 ： 网络请求都是异步线程， 如果需要在主线程执行回调，请使用async_main方法
-     */
     func post(url: String, params: [String: AnyObject], identifier: String? = nil) {
         Alamofire.request(.POST, url, parameters: params).responseData(completionHandler: { (response) in
+            self.result(response, identifier: identifier)
+        })
+    }
+    
+    /**
+     postWithLogin - 带用户登录的网络请求
+     */
+    func postWithLogin(url: String, params: [String: AnyObject], identifier: String? = nil) {
+        var newParams = params
+        newParams["userID"] = LoginController.userInfo()["userID"]
+        newParams["userToken"] = LoginController.userInfo()["userToken"]
+        Alamofire.request(.POST, url, parameters: newParams).responseData(completionHandler: { (response) in
             self.result(response, identifier: identifier)
         })
     }
@@ -34,17 +40,15 @@ extension BaseViewController {
         if let data = response.data {
             let json = JSON(data: data)
             switch json["errCode"].intValue {
-            case 0:
+            case 1:
                 self.netDelegate?.netSuccess(json["data"].description, identifier: identifier)
             case -2: // 需要登录
                 self.netDelegate?.netErrorAuth()
-            case 20000:// 数据规则校验失败
-                self.netDelegate?.netErrorCheck(replaceString(json["data"].description), identifier: identifier)
             default :
-                self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: replaceString(json["errMsg"].description), errorData: json["data"].description, identifier: identifier)
+                self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: json["errMsg"].stringValue, identifier: identifier)
             }
         } else {
-            self.netDelegate?.netError(AlamofireResultType.Net, errorInfo: "网络连接失败", errorData: nil, identifier: identifier)
+            self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: "网络连接失败", identifier: identifier)
         }
     }
     
