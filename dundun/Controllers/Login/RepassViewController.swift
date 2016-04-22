@@ -63,22 +63,6 @@ class RepassViewController: BaseViewController {
         Notify.show(Murmur: "密码修改成功，请登录", theme: NotiTheme.Success)
         dismissEvent()
     }
-    
-    override func netError(errorType: AlamofireResultType, errorInfo: String, errorData: String?, identifier: String?) {
-        if identifier == "sms" {
-            self.smsBtn.enabled = true
-        }
-        print("API请求错误：\(errorInfo)")
-        Notify.show(Whisper: errorInfo, theme: NotiTheme.Warring, viewController: self)
-    }
-    
-    override func netErrorCheck(errorData: String, identifier: String?) {
-        if identifier == "sms" {
-            self.smsBtn.enabled = true
-        }
-        print("数据校验错误：\(errorData)")
-        return Notify.show(Whisper: errorData, theme: NotiTheme.Warring, viewController: self)
-    }
 }
 extension RepassViewController {
     

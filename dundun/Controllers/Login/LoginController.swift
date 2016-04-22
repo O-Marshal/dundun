@@ -18,7 +18,7 @@ class LoginController {
     class func userSave(userId: Int, token: String) {
         let user = NSUserDefaults.standardUserDefaults()
         user.setInteger(userId, forKey: "userId")
-        user.setObject(token, forKey: "userToken")
+        user.setValue(token, forKeyPath: "userToken")
         user.synchronize()
     }
     
@@ -30,7 +30,7 @@ class LoginController {
     class func userInfo() -> [String: AnyObject] {
         let user = NSUserDefaults.standardUserDefaults()
         let userID = user.integerForKey("userId")
-        let userToken = String(user.objectForKey("userToken"))
+        let userToken: String = user.stringForKey("userToken")!
         return ["userID": userID, "userToken": userToken]
     }
     

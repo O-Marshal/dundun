@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Whisper
 import SwiftyJSON
 
 
@@ -56,13 +55,7 @@ class LoginViewController: BaseViewController {
         dismissEvent()
     }
     
-    override func netErrorCheck(errorData: String, identifier: String?) {
-        Notify.show(Whisper: errorData, theme: NotiTheme.Warring, viewController: self)
-    }
     
-    override func netError(errorType: AlamofireResultType, errorInfo: String, errorData: String?, identifier: String?) {
-        Notify.show(Whisper: errorInfo, theme: NotiTheme.Warring, viewController: self)
-    }
 }
 
 //MARK: - 处理事件 -

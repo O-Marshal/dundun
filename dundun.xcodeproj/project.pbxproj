@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A909C1E91CBBBC6C0062DA17 /* MSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909C1E81CBBBC6C0062DA17 /* MSize.swift */; };
 		A909C1EB1CBBBCB60062DA17 /* MColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909C1EA1CBBBCB60062DA17 /* MColor.swift */; };
-		A91844681CC5BABD00F1A0F8 /* Alamofire_ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91844671CC5BABD00F1A0F8 /* Alamofire_ExtensionViewController.swift */; };
 		A918446C1CC5BF4700F1A0F8 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = A918446B1CC5BF4700F1A0F8 /* Notify.swift */; };
 		A918C7271CC6608700E3F9A3 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A918C7261CC6608700E3F9A3 /* Timer.swift */; };
 		A91FCE301CC8BB4C0033305C /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91FCE2F1CC8BB4C0033305C /* ExtensionString.swift */; };
@@ -25,6 +24,7 @@
 		A9323E831CB68F7400FE8E1C /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9323E821CB68F7400FE8E1C /* RegistViewController.swift */; };
 		A9323E851CB68F8700FE8E1C /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9323E841CB68F8700FE8E1C /* LoginTextField.swift */; };
 		A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6C1CC9085C0045BE6D /* Size.swift */; };
+		A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */; };
 		A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */; };
 		A9594CAD1CC3BB16008CE1DA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */; };
 		A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CB11CC4B640008CE1DA /* LoginController.swift */; };
@@ -76,7 +76,6 @@
 		98D00E090CF999839EB810C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A909C1E81CBBBC6C0062DA17 /* MSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSize.swift; sourceTree = "<group>"; };
 		A909C1EA1CBBBCB60062DA17 /* MColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MColor.swift; sourceTree = "<group>"; };
-		A91844671CC5BABD00F1A0F8 /* Alamofire_ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire_ExtensionViewController.swift; sourceTree = "<group>"; };
 		A918446B1CC5BF4700F1A0F8 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		A918C7261CC6608700E3F9A3 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		A91FCE2F1CC8BB4C0033305C /* ExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		A9323E821CB68F7400FE8E1C /* RegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		A9323E841CB68F8700FE8E1C /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		A94A8E6C1CC9085C0045BE6D /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire_ExtensionViewController.swift; sourceTree = "<group>"; };
 		A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject_GCD.swift; sourceTree = "<group>"; };
 		A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		A9594CB11CC4B640008CE1DA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -283,6 +283,7 @@
 		A930E3D81CC5245100EABE5D /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				A94A8E6E1CC9A46A0045BE6D /* Alamofire */,
 				A91FCE311CC8C8CD0033305C /* SwiftyJSON */,
 				A930E3D91CC524AB00EABE5D /* Whisper */,
 			);
@@ -303,6 +304,14 @@
 				A94A8E6C1CC9085C0045BE6D /* Size.swift */,
 			);
 			path = global;
+			sourceTree = "<group>";
+		};
+		A94A8E6E1CC9A46A0045BE6D /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */,
+			);
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		A9594CA91CC3B663008CE1DA /* async */ = {
@@ -528,7 +537,6 @@
 			isa = PBXGroup;
 			children = (
 				A9323E7E1CB68F5100FE8E1C /* ExtensionUIviewController.swift */,
-				A91844671CC5BABD00F1A0F8 /* Alamofire_ExtensionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -722,7 +730,6 @@
 				A918C7271CC6608700E3F9A3 /* Timer.swift in Sources */,
 				A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */,
 				A91FCE301CC8BB4C0033305C /* ExtensionString.swift in Sources */,
-				A91844681CC5BABD00F1A0F8 /* Alamofire_ExtensionViewController.swift in Sources */,
 				A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */,
 				A9594CBC1CC4C0C3008CE1DA /* LogoView.swift in Sources */,
 				A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */,
@@ -748,6 +755,7 @@
 				A9C2BD231CC71CA7004181FF /* ExtensionButton.swift in Sources */,
 				A9E023FB1CC63549004A86B3 /* TestViewController.swift in Sources */,
 				A9594CC31CC4DB18008CE1DA /* ExtensionView.swift in Sources */,
+				A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */,
 				A9E023F91CC63402004A86B3 /* QRCodeWrapView.swift in Sources */,
 				A9594CBF1CC4C6AD008CE1DA /* MButton.swift in Sources */,
 			);

@@ -24,10 +24,9 @@ protocol UIViewControllerWithNetWorking {
     
     func netSuccess(result: String, identifier: String?)
     
-    func netError(errorType: AlamofireResultType, errorInfo: String, errorData: String?, identifier: String?)
+    func netError(errorType: AlamofireResultType, errorInfo: String, identifier: String?)
     
     func netErrorAuth()
-    func netErrorCheck( errorData: String, identifier: String?)
 }
 
 class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
@@ -62,8 +61,9 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
     /**
      请求错误
      */
-    func netError(errorType: AlamofireResultType, errorInfo: String, errorData: String?, identifier: String?) {
-        print("identifier:\(identifier)\nerrorType:\(errorType)\nerrorInfo:\(errorInfo)\nerrorData:\(errorData)")
+    func netError(errorType: AlamofireResultType, errorInfo: String, identifier: String?) {
+        print("identifier:\(identifier)\nerrorInfo:\(errorInfo)")
+        Notify.show(Whisper: errorInfo, theme: NotiTheme.Warring, viewController: self)
     }
     
     /**
@@ -71,12 +71,6 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
      */
     func netErrorAuth() {
         print("用户授权失败，需要重新登录")
-    }
-    /**
-     数据校验失败
-     */
-    func netErrorCheck(errorData: String, identifier: String?) {
-        print("identifier:\(identifier)\nerrorData:\(errorData)")
     }
     
     
