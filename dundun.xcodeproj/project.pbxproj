@@ -38,6 +38,8 @@
 		A94E0B7C1CCB50150033B0BE /* PersonalInfoCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */; };
 		A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */; };
 		A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7F1CCB5D490033B0BE /* PersonalInfoCellAddress.swift */; };
+		A94E0B821CCB61400033B0BE /* ALCameraViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94E0B811CCB61400033B0BE /* ALCameraViewController.framework */; };
+		A94E0B841CCB9F000033B0BE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94E0B831CCB9F000033B0BE /* Kingfisher.framework */; };
 		A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */; };
 		A9594CAD1CC3BB16008CE1DA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */; };
 		A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CB11CC4B640008CE1DA /* LoginController.swift */; };
@@ -126,6 +128,8 @@
 		A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellHeader.swift; sourceTree = "<group>"; };
 		A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellSelect.swift; sourceTree = "<group>"; };
 		A94E0B7F1CCB5D490033B0BE /* PersonalInfoCellAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellAddress.swift; sourceTree = "<group>"; };
+		A94E0B811CCB61400033B0BE /* ALCameraViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ALCameraViewController.framework; path = "../../../../Library/Developer/Xcode/DerivedData/dundun-euvjiviiaawkoxdjjziofushyyra/Build/Products/Debug-iphonesimulator/ALCameraViewController.framework"; sourceTree = "<group>"; };
+		A94E0B831CCB9F000033B0BE /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "../../../../Library/Developer/Xcode/DerivedData/dundun-euvjiviiaawkoxdjjziofushyyra/Build/Products/Debug-iphoneos/Kingfisher.framework"; sourceTree = "<group>"; };
 		A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject_GCD.swift; sourceTree = "<group>"; };
 		A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		A9594CB11CC4B640008CE1DA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A94E0B841CCB9F000033B0BE /* Kingfisher.framework in Frameworks */,
+				A94E0B821CCB61400033B0BE /* ALCameraViewController.framework in Frameworks */,
 				A95B967E1CC7758900D759E6 /* SwiftyJSON.framework in Frameworks */,
 				A9594CC61CC4F739008CE1DA /* Whisper.framework in Frameworks */,
 				A9594CAD1CC3BB16008CE1DA /* Alamofire.framework in Frameworks */,
@@ -199,6 +205,8 @@
 		9121413B89CD111DBB86B38C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A94E0B831CCB9F000033B0BE /* Kingfisher.framework */,
+				A94E0B811CCB61400033B0BE /* ALCameraViewController.framework */,
 				A95B967D1CC7758800D759E6 /* SwiftyJSON.framework */,
 				A95B96791CC765CA00D759E6 /* RxCocoa.framework */,
 				A95B967A1CC765CA00D759E6 /* RxSwift.framework */,

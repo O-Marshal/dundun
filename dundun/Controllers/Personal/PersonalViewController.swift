@@ -14,6 +14,8 @@ class PersonalViewController: BaseViewController {
     let tableView = UITableView()
     var model: PersonalModel?
     
+    var img: UIImage?
+    
     let menus = [
         [
             (img: "user_auth", title: "实名认证"),
@@ -40,13 +42,17 @@ class PersonalViewController: BaseViewController {
         tableView.registerClass(PersonalIndexTableViewCell.classForCoder(), forCellReuseIdentifier: "default")
         tableView.registerClass(PersonalIndexTableViewCellHeader.classForCoder(), forCellReuseIdentifier: "header")
         tableView.registerClass(PersonalIndexTableViewCellSgin.classForCoder(), forCellReuseIdentifier: "sign")
-        
-        
+        loadData()
+    }
+    
+    func loadData() {
         postWithLogin("http://dundun.mog.name/userInfo", params: [:])
     }
     
     override func netSuccess(result: String, identifier: String?) {
         model = PersonalModel(jsonString: result)
+        tableView.reloadData()
+//        print(model)
     }
     
 }
@@ -57,7 +63,12 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {
         case 0:// 头像昵称
-            showViewController(PersonalInfoSettingViewController(), sender: nil)
+            let personalInfo = PersonalInfoSettingViewController()
+            personalInfo.sex = model?.sex ?? 0
+            personalInfo.nick = model?.nick
+            personalInfo.imageCell.setImageString(model?.header)
+            personalInfo.delegate = self
+            showViewController(personalInfo, sender: nil)
         case 1:// 邀请签到
             return
         case 2:// 实名认证等等
@@ -110,6 +121,7 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:// 头像昵称
             let cell = tableView.dequeueReusableCellWithIdentifier("header") as! PersonalIndexTableViewCellHeader
             cell.initView()
+            cell.setData(model?.header, nick: model?.nick)
             return cell
         case 1:// 邀请签到
             let cell = tableView.dequeueReusableCellWithIdentifier("sign") as! PersonalIndexTableViewCellSgin
@@ -125,4 +137,10 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+}
+
+extension PersonalViewController: PersonalInfoSettingViewControllerProtocol {
+    func onSuccess() {
+        loadData()
+    }
 }

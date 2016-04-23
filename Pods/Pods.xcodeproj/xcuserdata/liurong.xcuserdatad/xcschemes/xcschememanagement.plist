@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ALCameraViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>11AAA7917B723DF06331EB1EC29EBDFA</key>
+		<key>1081DAB5E2DE367FAEF34CD26A050DD2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57A7CCF5802C4CA09A5484B5BC305A0A</key>
+		<key>120BF898FCCAF08F6DA8EE8AD2E85078</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7164B4AD411245033EC6863EAB240550</key>
+		<key>5A0524C1AF8CAF180F763E1F4E4CE914</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8A15A20FD8873D930D32BCE0D95CCFD</key>
+		<key>B342BB09507560C1C312903BDBD41A08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2FB626E1F6A029C82B213EDFF226A66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F91226101ECE8FCFD221A3EC54481F82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

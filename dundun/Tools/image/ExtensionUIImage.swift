@@ -40,4 +40,13 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
+    
+    func scaleToSize(size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContext(size)
+        drawInRect(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let scaleImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaleImage
+    }
+    
 }

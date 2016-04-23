@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SnapKit
+import Kingfisher
 
 class PersonalInfoCellHeader: UITableViewCell {
     
@@ -22,10 +24,20 @@ class PersonalInfoCellHeader: UITableViewCell {
         labView.font = UIFont(name: "Heiti SC", size: autoSize(16, max: 18))
         addSubview(labView)
         
-        imgView.image = UIImage(named: "user_defaultIcon")
         imgView.clipsToBounds = true
         imgView.layer.cornerRadius = 30
         addSubview(imgView)
+    }
+    
+    func setData(img: UIImage?) {
+        if img != nil {
+            self.imgView.image = img ?? UIImage(named: "user_defaultIcon")
+        }
+    }
+    func setImageString(img: String?) {
+        if img != nil {
+            imgView.kf_setImageWithURL(NSURL(string: img!)!, placeholderImage: UIImage(named: "user_defaultIcon"))
+        }
     }
     
     override func didMoveToSuperview() {
