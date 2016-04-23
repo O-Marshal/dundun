@@ -15,6 +15,10 @@ class MTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         
         tabBar.tintColor = MColor.themeColor
+        tabBar.translucent = false
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
+        
         
         addBarItems(WalletViewController(), img: "tab_wallet", title: "盾盾钱包")
         addBarItems(GoodsViewController(), img: "tab_shopping", title: "推荐商品")
@@ -30,6 +34,7 @@ class MTabBarController: UITabBarController, UITabBarControllerDelegate {
         child.tabBarItem.image = UIImage(named: img)
         child.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         tabs.append(title)
+//        child.tabBa
         addChildViewController(child)
     }
     

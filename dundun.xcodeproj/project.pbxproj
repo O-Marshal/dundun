@@ -26,6 +26,18 @@
 		A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6C1CC9085C0045BE6D /* Size.swift */; };
 		A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */; };
 		A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E711CC9F5210045BE6D /* MJson.swift */; };
+		A94E0B661CCAFFE20033B0BE /* PersonalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */; };
+		A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B671CCAFFF70033B0BE /* BaseModel.swift */; };
+		A94E0B6A1CCB0B9A0033B0BE /* PersonalValidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */; };
+		A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B6E1CCB12590033B0BE /* PersonalIndexTableViewCell.swift */; };
+		A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B701CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift */; };
+		A94E0B731CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B721CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift */; };
+		A94E0B751CCB27A40033B0BE /* MImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B741CCB27A40033B0BE /* MImage.swift */; };
+		A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B761CCB3E080033B0BE /* PersonalInfoSettingViewController.swift */; };
+		A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B791CCB4BF00033B0BE /* PersonalInfoCellTextField.swift */; };
+		A94E0B7C1CCB50150033B0BE /* PersonalInfoCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */; };
+		A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */; };
+		A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7F1CCB5D490033B0BE /* PersonalInfoCellAddress.swift */; };
 		A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */; };
 		A9594CAD1CC3BB16008CE1DA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */; };
 		A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CB11CC4B640008CE1DA /* LoginController.swift */; };
@@ -102,6 +114,18 @@
 		A94A8E6C1CC9085C0045BE6D /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire_ExtensionViewController.swift; sourceTree = "<group>"; };
 		A94A8E711CC9F5210045BE6D /* MJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJson.swift; sourceTree = "<group>"; };
+		A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalModel.swift; sourceTree = "<group>"; };
+		A94E0B671CCAFFF70033B0BE /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalValidateModel.swift; sourceTree = "<group>"; };
+		A94E0B6E1CCB12590033B0BE /* PersonalIndexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalIndexTableViewCell.swift; sourceTree = "<group>"; };
+		A94E0B701CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalIndexTableViewCellHeader.swift; sourceTree = "<group>"; };
+		A94E0B721CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalIndexTableViewCellSgin.swift; sourceTree = "<group>"; };
+		A94E0B741CCB27A40033B0BE /* MImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MImage.swift; sourceTree = "<group>"; };
+		A94E0B761CCB3E080033B0BE /* PersonalInfoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoSettingViewController.swift; sourceTree = "<group>"; };
+		A94E0B791CCB4BF00033B0BE /* PersonalInfoCellTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellTextField.swift; sourceTree = "<group>"; };
+		A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellHeader.swift; sourceTree = "<group>"; };
+		A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellSelect.swift; sourceTree = "<group>"; };
+		A94E0B7F1CCB5D490033B0BE /* PersonalInfoCellAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellAddress.swift; sourceTree = "<group>"; };
 		A9594CAA1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject_GCD.swift; sourceTree = "<group>"; };
 		A9594CAC1CC3BB16008CE1DA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		A9594CB11CC4B640008CE1DA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -317,6 +341,36 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		A94E0B6C1CCB11E80033B0BE /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A94E0B6D1CCB11F70033B0BE /* personal */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		A94E0B6D1CCB11F70033B0BE /* personal */ = {
+			isa = PBXGroup;
+			children = (
+				A94E0B781CCB4BBA0033B0BE /* info */,
+				A94E0B6E1CCB12590033B0BE /* PersonalIndexTableViewCell.swift */,
+				A94E0B701CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift */,
+				A94E0B721CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift */,
+			);
+			path = personal;
+			sourceTree = "<group>";
+		};
+		A94E0B781CCB4BBA0033B0BE /* info */ = {
+			isa = PBXGroup;
+			children = (
+				A94E0B791CCB4BF00033B0BE /* PersonalInfoCellTextField.swift */,
+				A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */,
+				A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */,
+				A94E0B7F1CCB5D490033B0BE /* PersonalInfoCellAddress.swift */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
 		A9594CA91CC3B663008CE1DA /* async */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				A9594CB61CC4BBD4008CE1DA /* ExtensionUIImage.swift */,
+				A94E0B741CCB27A40033B0BE /* MImage.swift */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -363,6 +418,7 @@
 			children = (
 				A9E65B641CC1C9CB009F8116 /* FeedBackViewController.swift */,
 				A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */,
+				A94E0B761CCB3E080033B0BE /* PersonalInfoSettingViewController.swift */,
 			);
 			name = "Personal(个人中心)";
 			path = Personal;
@@ -418,6 +474,9 @@
 		A9EE06B61CB66328002B6CAD /* Moldes */ = {
 			isa = PBXGroup;
 			children = (
+				A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */,
+				A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */,
+				A94E0B671CCAFFF70033B0BE /* BaseModel.swift */,
 			);
 			name = Moldes;
 			path = Models;
@@ -426,6 +485,7 @@
 		A9EE06B71CB66336002B6CAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A94E0B6C1CCB11E80033B0BE /* cell */,
 				A9594CBD1CC4C699008CE1DA /* btn */,
 				A9594CB81CC4BDD6008CE1DA /* common */,
 				A9EE06C41CB6763F002B6CAD /* Login */,
@@ -615,6 +675,7 @@
 				TargetAttributes = {
 					A920B19C1CB49EA800A6DA3F = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 46XVCFLXXT;
 					};
 					A920B1B01CB49EA800A6DA3F = {
 						CreatedOnToolsVersion = 7.3;
@@ -734,34 +795,46 @@
 				A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */,
 				A91FCE301CC8BB4C0033305C /* ExtensionString.swift in Sources */,
 				A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */,
+				A94E0B661CCAFFE20033B0BE /* PersonalModel.swift in Sources */,
 				A9594CBC1CC4C0C3008CE1DA /* LogoView.swift in Sources */,
+				A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */,
 				A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */,
 				A9323E831CB68F7400FE8E1C /* RegistViewController.swift in Sources */,
 				A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */,
 				A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */,
 				A9E65B961CC24339009F8116 /* MTabBarController.swift in Sources */,
 				A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */,
+				A94E0B731CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift in Sources */,
 				A9594CBA1CC4BDF3008CE1DA /* Line.swift in Sources */,
 				A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */,
 				A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */,
 				A909C1EB1CBBBCB60062DA17 /* MColor.swift in Sources */,
 				A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */,
 				A9594CB71CC4BBD4008CE1DA /* ExtensionUIImage.swift in Sources */,
+				A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */,
 				A9E65B9F1CC24A33009F8116 /* GoodsViewController.swift in Sources */,
 				A9323E7F1CB68F5100FE8E1C /* ExtensionUIviewController.swift in Sources */,
+				A94E0B751CCB27A40033B0BE /* MImage.swift in Sources */,
+				A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */,
 				A9323E7C1CB68F0000FE8E1C /* AppDelegate.swift in Sources */,
+				A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */,
+				A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */,
 				A91FCE331CC8C8E70033305C /* ExtensionSwiftyJSON.swift in Sources */,
 				A909C1E91CBBBC6C0062DA17 /* MSize.swift in Sources */,
 				A918446C1CC5BF4700F1A0F8 /* Notify.swift in Sources */,
 				A9323E851CB68F8700FE8E1C /* LoginTextField.swift in Sources */,
 				A9594CC11CC4CCDE008CE1DA /* RepassViewController.swift in Sources */,
 				A9E023F71CC617C7004A86B3 /* QRCodeViewController.swift in Sources */,
+				A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */,
+				A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */,
 				A9C2BD231CC71CA7004181FF /* ExtensionButton.swift in Sources */,
 				A9E023FB1CC63549004A86B3 /* TestViewController.swift in Sources */,
 				A9594CC31CC4DB18008CE1DA /* ExtensionView.swift in Sources */,
 				A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */,
+				A94E0B7C1CCB50150033B0BE /* PersonalInfoCellHeader.swift in Sources */,
 				A9E023F91CC63402004A86B3 /* QRCodeWrapView.swift in Sources */,
 				A9594CBF1CC4C6AD008CE1DA /* MButton.swift in Sources */,
+				A94E0B6A1CCB0B9A0033B0BE /* PersonalValidateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,11 +977,13 @@
 			baseConfigurationReference = 98D00E090CF999839EB810C3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = dundun/Resources/plists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.microali.dundun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -921,11 +996,13 @@
 			baseConfigurationReference = 1E435089563AF4BD100FE906 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = dundun/Resources/plists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.microali.dundun;
 				PRODUCT_NAME = "$(TARGET_NAME)";

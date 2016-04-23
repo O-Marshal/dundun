@@ -10,12 +10,21 @@ import UIKit
 
 class Line: UIView {
     
-    var offset: CGFloat = 0
+    var left: CGFloat = 0
+    var right: CGFloat = 0
     
     
     class func defaultLine(offset: CGFloat, color: UIColor = UIColor.whiteColor()) -> UIView {
         let v = Line()
-        v.offset = offset
+        v.left = offset
+        v.right = offset
+        v.backgroundColor = color
+        return v
+    }
+    class func defaultLine(left: CGFloat, right: CGFloat, color: UIColor = UIColor.whiteColor()) -> UIView {
+        let v = Line()
+        v.left = left
+        v.right = right
         v.backgroundColor = color
         return v
     }
@@ -23,10 +32,10 @@ class Line: UIView {
     override func didMoveToSuperview() {
         if superview == nil { return }
         snp_makeConstraints { (make) in
-            make.left.equalTo(superview!).offset(offset)
-            make.right.equalTo(superview!).offset(-offset)
+            make.left.equalTo(superview!).offset(left)
+            make.right.equalTo(superview!).offset(-right)
             make.height.equalTo(MSize.defaultSize.px(1))
-            make.bottom.equalTo(superview!).offset(-1)
+            make.bottom.equalTo(superview!)
         }
     }
 

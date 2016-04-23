@@ -20,29 +20,18 @@ class FeedBackViewController: UIViewController {
     }
     
     func initFeedBackView() {
-        let wrapView = UIView()
-        let label1 = UILabel()
-        let label2 = UILabel()
-        let label3 = UILabel()
-        let textType = UITextField()
-        let textMsg = UITextView()
-        let textInfo = UITextField()
-        let btn = UIButton()
+        let wrapView = UIView().addTo(view)
+        let label1 = UILabel().addTo(view).labelView
+        let label2 = UILabel().addTo(view).labelView
+        let label3 = UILabel().addTo(view).labelView
+        let textType = UITextField().addTo(view).textfieldView
+        let textMsg = UITextView().addTo(view).textfieldView
+        let textInfo = UITextField().addTo(view).textfieldView
+        let btn = UIButton().addTo(view).btnView
         
-        let line1 = UIView()
-        let line2 = UIView()
+        let line1 = UIView().addTo(view)
+        let line2 = UIView().addTo(view)
         
-        addsubView(wrapView)
-        addsubView(label1)
-        addsubView(label2)
-        addsubView(label3)
-        addsubView(textType)
-        addsubView(textMsg)
-        addsubView(textInfo)
-        addsubView(btn)
-        
-        addsubView(line1)
-        addsubView(line2)
         
         wrapView.backgroundColor = UIColor.whiteColor()
         setLabels([label1, label2, label3])
