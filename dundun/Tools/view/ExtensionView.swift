@@ -28,5 +28,13 @@ extension UIView {
     var btnView: UIButton {
         return self as! UIButton
     }
+    
+    var labelView: UILabel {
+        return self as! UILabel
+    }
+    
+    var textfieldView: UITextField {
+        return self as! UITextField
+    }
 
 }

@@ -21,10 +21,16 @@ class MColor {
     static let textPlacholderColor = UIColor(red: 0.55, green: 0.55, blue: 0.55, alpha: 1)
     
     
-    static let backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
+    static let backgroundColor = UIColor(red: 0.925, green: 0.957, blue: 1, alpha: 1)
     
     static let lineDefaultColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+    
     static let lineLoginColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.4)
+    
+    static let lineUserInfoColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.6)
+    
+    
+    static let buttonDisableColor = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1)
 
     
 }

@@ -36,6 +36,7 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
     override func viewDidLoad() {
         
         netDelegate = self
+        view.backgroundColor = MColor.backgroundColor
         
         initCommonNavBackItem()
         initView()
