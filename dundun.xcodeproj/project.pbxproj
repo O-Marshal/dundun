@@ -72,11 +72,36 @@
 		A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B931CC242E7009F8116 /* MNavigationController.swift */; };
 		A9E65B961CC24339009F8116 /* MTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B951CC24339009F8116 /* MTabBarController.swift */; };
 		A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B971CC247D7009F8116 /* BaseViewController.swift */; };
-		A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B9C1CC24A04009F8116 /* WalletViewController.swift */; };
 		A9E65B9F1CC24A33009F8116 /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B9E1CC24A33009F8116 /* GoodsViewController.swift */; };
 		A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */; };
 		A9E65BA31CC24A7B009F8116 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */; };
 		B713E4F090F4DDBA5F10095A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F8095EFCD135BC30B38567 /* Pods.framework */; };
+		DCF2C1361CCB7CAD007D5196 /* BillBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1301CCB7CAD007D5196 /* BillBaseViewController.swift */; };
+		DCF2C1371CCB7CAD007D5196 /* BindingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1311CCB7CAD007D5196 /* BindingRecordViewController.swift */; };
+		DCF2C1381CCB7CAD007D5196 /* EffectiveRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1321CCB7CAD007D5196 /* EffectiveRecordViewController.swift */; };
+		DCF2C1391CCB7CAD007D5196 /* InvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1331CCB7CAD007D5196 /* InvitationViewController.swift */; };
+		DCF2C13A1CCB7CAD007D5196 /* MasageCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1341CCB7CAD007D5196 /* MasageCenterViewController.swift */; };
+		DCF2C13B1CCB7CAD007D5196 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1351CCB7CAD007D5196 /* ScanViewController.swift */; };
+		DCF2C1431CCB7CB8007D5196 /* CardBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C13D1CCB7CB8007D5196 /* CardBaseViewController.swift */; };
+		DCF2C1441CCB7CB8007D5196 /* CardCanBindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C13E1CCB7CB8007D5196 /* CardCanBindingViewController.swift */; };
+		DCF2C1451CCB7CB8007D5196 /* CardDidBindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C13F1CCB7CB8007D5196 /* CardDidBindingViewController.swift */; };
+		DCF2C1461CCB7CB8007D5196 /* CardIneffectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1401CCB7CB8007D5196 /* CardIneffectiveViewController.swift */; };
+		DCF2C1471CCB7CB8007D5196 /* RechargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1411CCB7CB8007D5196 /* RechargeViewController.swift */; };
+		DCF2C1481CCB7CB8007D5196 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1421CCB7CB8007D5196 /* WithdrawalViewController.swift */; };
+		DCF2C14D1CCB7CC7007D5196 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1491CCB7CC7007D5196 /* HomePageViewController.swift */; };
+		DCF2C14E1CCB7CC7007D5196 /* TestBillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C14A1CCB7CC7007D5196 /* TestBillTableViewController.swift */; };
+		DCF2C14F1CCB7CC7007D5196 /* TestCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C14B1CCB7CC7007D5196 /* TestCardTableViewController.swift */; };
+		DCF2C1501CCB7CC7007D5196 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C14C1CCB7CC7007D5196 /* WalletViewController.swift */; };
+		DCF2C1591CCB7D00007D5196 /* AdvertisementImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1521CCB7D00007D5196 /* AdvertisementImagesView.swift */; };
+		DCF2C15A1CCB7D00007D5196 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1531CCB7D00007D5196 /* AssetsView.swift */; };
+		DCF2C15B1CCB7D00007D5196 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1541CCB7D00007D5196 /* BillTableViewCell.swift */; };
+		DCF2C15C1CCB7D00007D5196 /* BillWithDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1551CCB7D00007D5196 /* BillWithDetailTableViewCell.swift */; };
+		DCF2C15D1CCB7D00007D5196 /* BindingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1561CCB7D00007D5196 /* BindingTableViewCell.swift */; };
+		DCF2C15E1CCB7D00007D5196 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1571CCB7D00007D5196 /* HomePageView.swift */; };
+		DCF2C15F1CCB7D00007D5196 /* MasageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1581CCB7D00007D5196 /* MasageTableViewCell.swift */; };
+		DCF2C1641CCBA77D007D5196 /* AdvertisemImageNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1631CCBA77D007D5196 /* AdvertisemImageNameModel.swift */; };
+		DCF2C1661CCBA838007D5196 /* WalletHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1651CCBA838007D5196 /* WalletHomeModel.swift */; };
+		DCF2C1681CCBA873007D5196 /* WalletModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2C1671CCBA873007D5196 /* WalletModelList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,11 +199,36 @@
 		A9E65B931CC242E7009F8116 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
 		A9E65B951CC24339009F8116 /* MTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTabBarController.swift; sourceTree = "<group>"; };
 		A9E65B971CC247D7009F8116 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		A9E65B9C1CC24A04009F8116 /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		A9E65B9E1CC24A33009F8116 /* GoodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
 		A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
 		C2F8095EFCD135BC30B38567 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF2C1301CCB7CAD007D5196 /* BillBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillBaseViewController.swift; sourceTree = "<group>"; };
+		DCF2C1311CCB7CAD007D5196 /* BindingRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingRecordViewController.swift; sourceTree = "<group>"; };
+		DCF2C1321CCB7CAD007D5196 /* EffectiveRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectiveRecordViewController.swift; sourceTree = "<group>"; };
+		DCF2C1331CCB7CAD007D5196 /* InvitationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationViewController.swift; sourceTree = "<group>"; };
+		DCF2C1341CCB7CAD007D5196 /* MasageCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasageCenterViewController.swift; sourceTree = "<group>"; };
+		DCF2C1351CCB7CAD007D5196 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		DCF2C13D1CCB7CB8007D5196 /* CardBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBaseViewController.swift; sourceTree = "<group>"; };
+		DCF2C13E1CCB7CB8007D5196 /* CardCanBindingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCanBindingViewController.swift; sourceTree = "<group>"; };
+		DCF2C13F1CCB7CB8007D5196 /* CardDidBindingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDidBindingViewController.swift; sourceTree = "<group>"; };
+		DCF2C1401CCB7CB8007D5196 /* CardIneffectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardIneffectiveViewController.swift; sourceTree = "<group>"; };
+		DCF2C1411CCB7CB8007D5196 /* RechargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeViewController.swift; sourceTree = "<group>"; };
+		DCF2C1421CCB7CB8007D5196 /* WithdrawalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawalViewController.swift; sourceTree = "<group>"; };
+		DCF2C1491CCB7CC7007D5196 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		DCF2C14A1CCB7CC7007D5196 /* TestBillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBillTableViewController.swift; sourceTree = "<group>"; };
+		DCF2C14B1CCB7CC7007D5196 /* TestCardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCardTableViewController.swift; sourceTree = "<group>"; };
+		DCF2C14C1CCB7CC7007D5196 /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		DCF2C1521CCB7D00007D5196 /* AdvertisementImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisementImagesView.swift; sourceTree = "<group>"; };
+		DCF2C1531CCB7D00007D5196 /* AssetsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
+		DCF2C1541CCB7D00007D5196 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		DCF2C1551CCB7D00007D5196 /* BillWithDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillWithDetailTableViewCell.swift; sourceTree = "<group>"; };
+		DCF2C1561CCB7D00007D5196 /* BindingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingTableViewCell.swift; sourceTree = "<group>"; };
+		DCF2C1571CCB7D00007D5196 /* HomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		DCF2C1581CCB7D00007D5196 /* MasageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasageTableViewCell.swift; sourceTree = "<group>"; };
+		DCF2C1631CCBA77D007D5196 /* AdvertisemImageNameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisemImageNameModel.swift; sourceTree = "<group>"; };
+		DCF2C1651CCBA838007D5196 /* WalletHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletHomeModel.swift; sourceTree = "<group>"; };
+		DCF2C1671CCBA873007D5196 /* WalletModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletModelList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,15 +582,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		A9E65B991CC2490A009F8116 /* Wallet(钱包) */ = {
-			isa = PBXGroup;
-			children = (
-				A9E65B9C1CC24A04009F8116 /* WalletViewController.swift */,
-			);
-			name = "Wallet(钱包)";
-			path = Wallet;
-			sourceTree = "<group>";
-		};
 		A9E65B9A1CC24982009F8116 /* Goods(商城) */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,7 +603,13 @@
 		A9EE06B61CB66328002B6CAD /* Moldes */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				A91FBD721CCC629F00617935 /* user */,
+=======
+				DCF2C1621CCB86AE007D5196 /* Wallet */,
+				A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */,
+				A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */,
+>>>>>>> origin/master
 				A94E0B671CCAFFF70033B0BE /* BaseModel.swift */,
 			);
 			name = Moldes;
@@ -572,7 +619,7 @@
 		A9EE06B71CB66336002B6CAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A9E0F57C1CCBB98600DFE715 /* tableView */,
+				DCF2C1511CCB7D00007D5196 /* Wallet */,
 				A94E0B6C1CCB11E80033B0BE /* cell */,
 				A9594CBD1CC4C699008CE1DA /* btn */,
 				A9594CB81CC4BDD6008CE1DA /* common */,
@@ -585,11 +632,11 @@
 		A9EE06B81CB66341002B6CAD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DCF2C12E1CCB7C94007D5196 /* Wallet(钱包) */,
 				A9E023F51CC6179B004A86B3 /* Others */,
 				A9E65B921CC242AE009F8116 /* Base */,
 				A9E65B9B1CC249A2009F8116 /* Active(活动) */,
 				A9E65B9A1CC24982009F8116 /* Goods(商城) */,
-				A9E65B991CC2490A009F8116 /* Wallet(钱包) */,
 				A9E65B631CC1C98D009F8116 /* Personal(个人中心) */,
 				A9EE06C11CB675EF002B6CAD /* Login */,
 			);
@@ -691,6 +738,69 @@
 				A9756A5C1CCCC88B00E10621 /* ViewControllerProtocols.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DCF2C12E1CCB7C94007D5196 /* Wallet(钱包) */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2C1491CCB7CC7007D5196 /* HomePageViewController.swift */,
+				DCF2C14A1CCB7CC7007D5196 /* TestBillTableViewController.swift */,
+				DCF2C14B1CCB7CC7007D5196 /* TestCardTableViewController.swift */,
+				DCF2C14C1CCB7CC7007D5196 /* WalletViewController.swift */,
+				DCF2C13C1CCB7CB8007D5196 /* Card */,
+				DCF2C12F1CCB7CAD007D5196 /* Bill */,
+			);
+			name = "Wallet(钱包)";
+			sourceTree = "<group>";
+		};
+		DCF2C12F1CCB7CAD007D5196 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2C1301CCB7CAD007D5196 /* BillBaseViewController.swift */,
+				DCF2C1311CCB7CAD007D5196 /* BindingRecordViewController.swift */,
+				DCF2C1321CCB7CAD007D5196 /* EffectiveRecordViewController.swift */,
+				DCF2C1331CCB7CAD007D5196 /* InvitationViewController.swift */,
+				DCF2C1341CCB7CAD007D5196 /* MasageCenterViewController.swift */,
+				DCF2C1351CCB7CAD007D5196 /* ScanViewController.swift */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
+		DCF2C13C1CCB7CB8007D5196 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2C13D1CCB7CB8007D5196 /* CardBaseViewController.swift */,
+				DCF2C13E1CCB7CB8007D5196 /* CardCanBindingViewController.swift */,
+				DCF2C13F1CCB7CB8007D5196 /* CardDidBindingViewController.swift */,
+				DCF2C1401CCB7CB8007D5196 /* CardIneffectiveViewController.swift */,
+				DCF2C1411CCB7CB8007D5196 /* RechargeViewController.swift */,
+				DCF2C1421CCB7CB8007D5196 /* WithdrawalViewController.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		DCF2C1511CCB7D00007D5196 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2C1521CCB7D00007D5196 /* AdvertisementImagesView.swift */,
+				DCF2C1531CCB7D00007D5196 /* AssetsView.swift */,
+				DCF2C1541CCB7D00007D5196 /* BillTableViewCell.swift */,
+				DCF2C1551CCB7D00007D5196 /* BillWithDetailTableViewCell.swift */,
+				DCF2C1561CCB7D00007D5196 /* BindingTableViewCell.swift */,
+				DCF2C1571CCB7D00007D5196 /* HomePageView.swift */,
+				DCF2C1581CCB7D00007D5196 /* MasageTableViewCell.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		DCF2C1621CCB86AE007D5196 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				DCF2C1631CCBA77D007D5196 /* AdvertisemImageNameModel.swift */,
+				DCF2C1651CCBA838007D5196 /* WalletHomeModel.swift */,
+				DCF2C1671CCBA873007D5196 /* WalletModelList.swift */,
+			);
+			path = Wallet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -877,10 +987,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				A9756A601CCCCFAF00E10621 /* PersoanlAddressModel.swift in Sources */,
+=======
+				DCF2C14D1CCB7CC7007D5196 /* HomePageViewController.swift in Sources */,
+>>>>>>> origin/master
 				A9594CB41CC4B66C008CE1DA /* LoginViewController.swift in Sources */,
 				A9E65BA31CC24A7B009F8116 /* ActiveViewController.swift in Sources */,
+				DCF2C15C1CCB7D00007D5196 /* BillWithDetailTableViewCell.swift in Sources */,
+				DCF2C1361CCB7CAD007D5196 /* BillBaseViewController.swift in Sources */,
 				A9E65B911CC241DE009F8116 /* MWindow.swift in Sources */,
+				DCF2C13A1CCB7CAD007D5196 /* MasageCenterViewController.swift in Sources */,
+				DCF2C1471CCB7CB8007D5196 /* RechargeViewController.swift in Sources */,
 				A918C7271CC6608700E3F9A3 /* Timer.swift in Sources */,
 				A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */,
 				A9756A5D1CCCC88B00E10621 /* ViewControllerProtocols.swift in Sources */,
@@ -890,42 +1008,74 @@
 				A9756A591CCCA66700E10621 /* PersonalAdrCellNew.swift in Sources */,
 				A9594CBC1CC4C0C3008CE1DA /* LogoView.swift in Sources */,
 				A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */,
+				DCF2C14E1CCB7CC7007D5196 /* TestBillTableViewController.swift in Sources */,
+				DCF2C1481CCB7CB8007D5196 /* WithdrawalViewController.swift in Sources */,
+				DCF2C1641CCBA77D007D5196 /* AdvertisemImageNameModel.swift in Sources */,
 				A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */,
+				DCF2C1661CCBA838007D5196 /* WalletHomeModel.swift in Sources */,
 				A9323E831CB68F7400FE8E1C /* RegistViewController.swift in Sources */,
+<<<<<<< HEAD
 				A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */,
+=======
+				A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */,
+				DCF2C1461CCB7CB8007D5196 /* CardIneffectiveViewController.swift in Sources */,
+				DCF2C1381CCB7CAD007D5196 /* EffectiveRecordViewController.swift in Sources */,
+>>>>>>> origin/master
 				A9E65B961CC24339009F8116 /* MTabBarController.swift in Sources */,
 				A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */,
 				A94E0B731CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift in Sources */,
 				A9594CBA1CC4BDF3008CE1DA /* Line.swift in Sources */,
+				DCF2C15D1CCB7D00007D5196 /* BindingTableViewCell.swift in Sources */,
 				A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */,
 				A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */,
 				A9756A671CCCD2DD00E10621 /* PersonalAddressViewController.swift in Sources */,
 				A909C1EB1CBBBCB60062DA17 /* MColor.swift in Sources */,
 				A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */,
 				A9594CB71CC4BBD4008CE1DA /* ExtensionUIImage.swift in Sources */,
+				DCF2C1431CCB7CB8007D5196 /* CardBaseViewController.swift in Sources */,
 				A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */,
 				A9756A5B1CCCA90100E10621 /* PersonalAdrCellBtn.swift in Sources */,
 				A9E65B9F1CC24A33009F8116 /* GoodsViewController.swift in Sources */,
 				A9323E7F1CB68F5100FE8E1C /* ExtensionUIviewController.swift in Sources */,
 				A94E0B751CCB27A40033B0BE /* MImage.swift in Sources */,
+<<<<<<< HEAD
 				A9756A541CCC9C5300E10621 /* PersonalAdrCellDefault.swift in Sources */,
+=======
+				DCF2C1451CCB7CB8007D5196 /* CardDidBindingViewController.swift in Sources */,
+				A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */,
+>>>>>>> origin/master
 				A9323E7C1CB68F0000FE8E1C /* AppDelegate.swift in Sources */,
+				DCF2C1681CCBA873007D5196 /* WalletModelList.swift in Sources */,
 				A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */,
 				A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */,
+<<<<<<< HEAD
 				A9756A701CCCD31700E10621 /* PersonalModel.swift in Sources */,
+=======
+				DCF2C1371CCB7CAD007D5196 /* BindingRecordViewController.swift in Sources */,
+				DCF2C1591CCB7D00007D5196 /* AdvertisementImagesView.swift in Sources */,
+>>>>>>> origin/master
 				A91FCE331CC8C8E70033305C /* ExtensionSwiftyJSON.swift in Sources */,
 				A909C1E91CBBBC6C0062DA17 /* MSize.swift in Sources */,
+				DCF2C14F1CCB7CC7007D5196 /* TestCardTableViewController.swift in Sources */,
 				A918446C1CC5BF4700F1A0F8 /* Notify.swift in Sources */,
 				A9323E851CB68F8700FE8E1C /* LoginTextField.swift in Sources */,
+				DCF2C1441CCB7CB8007D5196 /* CardCanBindingViewController.swift in Sources */,
 				A9594CC11CC4CCDE008CE1DA /* RepassViewController.swift in Sources */,
 				A9E023F71CC617C7004A86B3 /* QRCodeViewController.swift in Sources */,
+				DCF2C1501CCB7CC7007D5196 /* WalletViewController.swift in Sources */,
 				A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */,
 				A9756A6C1CCCD2F200E10621 /* FeedBackViewController.swift in Sources */,
 				A9756A711CCCD31700E10621 /* PersonalValidateModel.swift in Sources */,
 				A9756A691CCCD2E700E10621 /* PersonalInfoSettingViewController.swift in Sources */,
 				A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */,
+				DCF2C1391CCB7CAD007D5196 /* InvitationViewController.swift in Sources */,
+				DCF2C15B1CCB7D00007D5196 /* BillTableViewCell.swift in Sources */,
+				DCF2C13B1CCB7CAD007D5196 /* ScanViewController.swift in Sources */,
+				DCF2C15E1CCB7D00007D5196 /* HomePageView.swift in Sources */,
+				DCF2C15F1CCB7D00007D5196 /* MasageTableViewCell.swift in Sources */,
 				A9C2BD231CC71CA7004181FF /* ExtensionButton.swift in Sources */,
 				A9E023FB1CC63549004A86B3 /* TestViewController.swift in Sources */,
+				DCF2C15A1CCB7D00007D5196 /* AssetsView.swift in Sources */,
 				A9594CC31CC4DB18008CE1DA /* ExtensionView.swift in Sources */,
 				A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */,
 				A94E0B7C1CCB50150033B0BE /* PersonalInfoCellHeader.swift in Sources */,

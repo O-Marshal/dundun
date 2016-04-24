@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (3.3.0)
-  - ALCameraViewController (1.1.9)
   - Kingfisher (2.2.0)
   - SnapKit (0.20.0)
   - SwiftyJSON (2.3.2)
@@ -9,7 +8,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - ALCameraViewController
   - Kingfisher
   - SnapKit
   - SwiftyJSON
@@ -18,7 +16,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  ALCameraViewController: f171ffb7e84d211277a0f97823a2bda7418dc573
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
