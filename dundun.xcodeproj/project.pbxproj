@@ -64,6 +64,17 @@
 		A9E65B9F1CC24A33009F8116 /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B9E1CC24A33009F8116 /* GoodsViewController.swift */; };
 		A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */; };
 		A9E65BA31CC24A7B009F8116 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */; };
+		AF5467C61CCCBCBA002CA837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467C51CCCBCBA002CA837 /* ViewController.swift */; };
+		AF5467D51CCCBCC0002CA837 /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467C91CCCBCC0002CA837 /* BlockViewController.swift */; };
+		AF5467D61CCCBCC0002CA837 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467CA1CCCBCC0002CA837 /* InviteViewController.swift */; };
+		AF5467D71CCCBCC0002CA837 /* ReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467CB1CCCBCC0002CA837 /* ReturnViewController.swift */; };
+		AF5467D81CCCBCC0002CA837 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467CC1CCCBCC0002CA837 /* SignInViewController.swift */; };
+		AF5467D91CCCBCC0002CA837 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467CE1CCCBCC0002CA837 /* Money.swift */; };
+		AF5467DA1CCCBCC0002CA837 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467CF1CCCBCC0002CA837 /* Ranking.swift */; };
+		AF5467DB1CCCBCC0002CA837 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467D01CCCBCC0002CA837 /* Record.swift */; };
+		AF5467DC1CCCBCC0002CA837 /* MoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467D21CCCBCC0002CA837 /* MoneyView.swift */; };
+		AF5467DD1CCCBCC0002CA837 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467D31CCCBCC0002CA837 /* RankingView.swift */; };
+		AF5467DE1CCCBCC0002CA837 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5467D41CCCBCC0002CA837 /* RecordView.swift */; };
 		B713E4F090F4DDBA5F10095A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F8095EFCD135BC30B38567 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +165,17 @@
 		A9E65B9E1CC24A33009F8116 /* GoodsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
 		A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
+		AF5467C51CCCBCBA002CA837 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF5467C91CCCBCC0002CA837 /* BlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
+		AF5467CA1CCCBCC0002CA837 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
+		AF5467CB1CCCBCC0002CA837 /* ReturnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnViewController.swift; sourceTree = "<group>"; };
+		AF5467CC1CCCBCC0002CA837 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AF5467CE1CCCBCC0002CA837 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		AF5467CF1CCCBCC0002CA837 /* Ranking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		AF5467D01CCCBCC0002CA837 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		AF5467D21CCCBCC0002CA837 /* MoneyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyView.swift; sourceTree = "<group>"; };
+		AF5467D31CCCBCC0002CA837 /* RankingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		AF5467D41CCCBCC0002CA837 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		C2F8095EFCD135BC30B38567 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -466,6 +488,8 @@
 			isa = PBXGroup;
 			children = (
 				A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */,
+				AF5467C51CCCBCBA002CA837 /* ViewController.swift */,
+				AF5467C71CCCBCC0002CA837 /* SignIn */,
 			);
 			name = "Active(活动)";
 			path = Active;
@@ -602,6 +626,47 @@
 				A9323E7E1CB68F5100FE8E1C /* ExtensionUIviewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AF5467C71CCCBCC0002CA837 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				AF5467C81CCCBCC0002CA837 /* Controller */,
+				AF5467CD1CCCBCC0002CA837 /* Mode */,
+				AF5467D11CCCBCC0002CA837 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		AF5467C81CCCBCC0002CA837 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF5467C91CCCBCC0002CA837 /* BlockViewController.swift */,
+				AF5467CA1CCCBCC0002CA837 /* InviteViewController.swift */,
+				AF5467CB1CCCBCC0002CA837 /* ReturnViewController.swift */,
+				AF5467CC1CCCBCC0002CA837 /* SignInViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF5467CD1CCCBCC0002CA837 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				AF5467CE1CCCBCC0002CA837 /* Money.swift */,
+				AF5467CF1CCCBCC0002CA837 /* Ranking.swift */,
+				AF5467D01CCCBCC0002CA837 /* Record.swift */,
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		AF5467D11CCCBCC0002CA837 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF5467D21CCCBCC0002CA837 /* MoneyView.swift */,
+				AF5467D31CCCBCC0002CA837 /* RankingView.swift */,
+				AF5467D41CCCBCC0002CA837 /* RecordView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -797,12 +862,15 @@
 				A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */,
 				A94E0B661CCAFFE20033B0BE /* PersonalModel.swift in Sources */,
 				A9594CBC1CC4C0C3008CE1DA /* LogoView.swift in Sources */,
+				AF5467D61CCCBCC0002CA837 /* InviteViewController.swift in Sources */,
 				A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */,
+				AF5467D91CCCBCC0002CA837 /* Money.swift in Sources */,
 				A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */,
 				A9323E831CB68F7400FE8E1C /* RegistViewController.swift in Sources */,
 				A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */,
 				A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */,
 				A9E65B961CC24339009F8116 /* MTabBarController.swift in Sources */,
+				AF5467DB1CCCBCC0002CA837 /* Record.swift in Sources */,
 				A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */,
 				A94E0B731CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift in Sources */,
 				A9594CBA1CC4BDF3008CE1DA /* Line.swift in Sources */,
@@ -810,6 +878,7 @@
 				A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */,
 				A909C1EB1CBBBCB60062DA17 /* MColor.swift in Sources */,
 				A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */,
+				AF5467D71CCCBCC0002CA837 /* ReturnViewController.swift in Sources */,
 				A9594CB71CC4BBD4008CE1DA /* ExtensionUIImage.swift in Sources */,
 				A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */,
 				A9E65B9F1CC24A33009F8116 /* GoodsViewController.swift in Sources */,
@@ -818,8 +887,14 @@
 				A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */,
 				A9323E7C1CB68F0000FE8E1C /* AppDelegate.swift in Sources */,
 				A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */,
+				AF5467C61CCCBCBA002CA837 /* ViewController.swift in Sources */,
+				AF5467DA1CCCBCC0002CA837 /* Ranking.swift in Sources */,
+				AF5467D51CCCBCC0002CA837 /* BlockViewController.swift in Sources */,
+				AF5467DE1CCCBCC0002CA837 /* RecordView.swift in Sources */,
+				AF5467DC1CCCBCC0002CA837 /* MoneyView.swift in Sources */,
 				A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */,
 				A91FCE331CC8C8E70033305C /* ExtensionSwiftyJSON.swift in Sources */,
+				AF5467DD1CCCBCC0002CA837 /* RankingView.swift in Sources */,
 				A909C1E91CBBBC6C0062DA17 /* MSize.swift in Sources */,
 				A918446C1CC5BF4700F1A0F8 /* Notify.swift in Sources */,
 				A9323E851CB68F8700FE8E1C /* LoginTextField.swift in Sources */,
@@ -828,6 +903,7 @@
 				A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */,
 				A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */,
 				A9C2BD231CC71CA7004181FF /* ExtensionButton.swift in Sources */,
+				AF5467D81CCCBCC0002CA837 /* SignInViewController.swift in Sources */,
 				A9E023FB1CC63549004A86B3 /* TestViewController.swift in Sources */,
 				A9594CC31CC4DB18008CE1DA /* ExtensionView.swift in Sources */,
 				A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */,

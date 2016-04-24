@@ -10,4 +10,8 @@ import UIKit
 
 class ActiveViewController: BaseViewController {
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        showViewController(ViewController(), sender: nil)
+    }
+    
 }
