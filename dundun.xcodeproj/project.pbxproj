@@ -77,6 +77,20 @@
 		A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */; };
 		A9E65BA31CC24A7B009F8116 /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */; };
 		B713E4F090F4DDBA5F10095A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F8095EFCD135BC30B38567 /* Pods.framework */; };
+		F56D8DEF1CCB6934009EDF43 /* IndentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DE81CCB6934009EDF43 /* IndentViewController.swift */; };
+		F56D8DF01CCB6934009EDF43 /* LogisticInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DE91CCB6934009EDF43 /* LogisticInfoController.swift */; };
+		F56D8DF11CCB6934009EDF43 /* MyIndentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DEA1CCB6934009EDF43 /* MyIndentController.swift */; };
+		F56D8DF21CCB6934009EDF43 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DEB1CCB6934009EDF43 /* PayViewController.swift */; };
+		F56D8DF31CCB6934009EDF43 /* ReciveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DEC1CCB6934009EDF43 /* ReciveViewController.swift */; };
+		F56D8DF41CCB6934009EDF43 /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DED1CCB6934009EDF43 /* SellerViewController.swift */; };
+		F56D8DF51CCB6934009EDF43 /* RefundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DEE1CCB6934009EDF43 /* RefundViewController.swift */; };
+		F56D8DF71CCB698B009EDF43 /* ExtensionIndentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DF61CCB698B009EDF43 /* ExtensionIndentView.swift */; };
+		F56D8DFD1CCB69DB009EDF43 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DF91CCB69DB009EDF43 /* CircleView.swift */; };
+		F56D8DFE1CCB69DB009EDF43 /* IndentFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DFA1CCB69DB009EDF43 /* IndentFlowView.swift */; };
+		F56D8DFF1CCB69DB009EDF43 /* LogisticInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DFB1CCB69DB009EDF43 /* LogisticInfoCell.swift */; };
+		F56D8E001CCB69DB009EDF43 /* ShoppingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8DFC1CCB69DB009EDF43 /* ShoppingListCell.swift */; };
+		F56D8E031CCB8AFC009EDF43 /* IndentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D8E021CCB8AFC009EDF43 /* IndentModel.swift */; };
+		F5B7314E1CCCB1F5005E23CC /* MyIndentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7314D1CCCB1F5005E23CC /* MyIndentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +193,20 @@
 		A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		A9E65BA21CC24A7B009F8116 /* ActiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveViewController.swift; sourceTree = "<group>"; };
 		C2F8095EFCD135BC30B38567 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F56D8DE81CCB6934009EDF43 /* IndentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndentViewController.swift; sourceTree = "<group>"; };
+		F56D8DE91CCB6934009EDF43 /* LogisticInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogisticInfoController.swift; sourceTree = "<group>"; };
+		F56D8DEA1CCB6934009EDF43 /* MyIndentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIndentController.swift; sourceTree = "<group>"; };
+		F56D8DEB1CCB6934009EDF43 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		F56D8DEC1CCB6934009EDF43 /* ReciveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciveViewController.swift; sourceTree = "<group>"; };
+		F56D8DED1CCB6934009EDF43 /* SellerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
+		F56D8DEE1CCB6934009EDF43 /* RefundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefundViewController.swift; sourceTree = "<group>"; };
+		F56D8DF61CCB698B009EDF43 /* ExtensionIndentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionIndentView.swift; sourceTree = "<group>"; };
+		F56D8DF91CCB69DB009EDF43 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		F56D8DFA1CCB69DB009EDF43 /* IndentFlowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndentFlowView.swift; sourceTree = "<group>"; };
+		F56D8DFB1CCB69DB009EDF43 /* LogisticInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogisticInfoCell.swift; sourceTree = "<group>"; };
+		F56D8DFC1CCB69DB009EDF43 /* ShoppingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
+		F56D8E021CCB8AFC009EDF43 /* IndentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndentModel.swift; sourceTree = "<group>"; };
+		F5B7314D1CCCB1F5005E23CC /* MyIndentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIndentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -544,6 +572,7 @@
 		A9E65B9A1CC24982009F8116 /* Goods(商城) */ = {
 			isa = PBXGroup;
 			children = (
+				F56D8DE71CCB68E0009EDF43 /* Indent(订单) */,
 				A9E65B9E1CC24A33009F8116 /* GoodsViewController.swift */,
 			);
 			name = "Goods(商城)";
@@ -564,6 +593,7 @@
 			children = (
 				A91FBD721CCC629F00617935 /* user */,
 				A94E0B671CCAFFF70033B0BE /* BaseModel.swift */,
+				F56D8E011CCB875E009EDF43 /* Indent */,
 			);
 			name = Moldes;
 			path = Models;
@@ -572,7 +602,11 @@
 		A9EE06B71CB66336002B6CAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				A9E0F57C1CCBB98600DFE715 /* tableView */,
+=======
+				F56D8DF81CCB69A6009EDF43 /* Indent(订单) */,
+>>>>>>> newChy
 				A94E0B6C1CCB11E80033B0BE /* cell */,
 				A9594CBD1CC4C699008CE1DA /* btn */,
 				A9594CB81CC4BDD6008CE1DA /* common */,
@@ -613,6 +647,7 @@
 		A9EE06BB1CB6644C002B6CAD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F56D8DF61CCB698B009EDF43 /* ExtensionIndentView.swift */,
 				A9594CC21CC4DB18008CE1DA /* ExtensionView.swift */,
 				A9C2BD221CC71CA7004181FF /* ExtensionButton.swift */,
 			);
@@ -693,6 +728,42 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		F56D8DE71CCB68E0009EDF43 /* Indent(订单) */ = {
+			isa = PBXGroup;
+			children = (
+				F56D8DE81CCB6934009EDF43 /* IndentViewController.swift */,
+				F56D8DEB1CCB6934009EDF43 /* PayViewController.swift */,
+				F56D8DED1CCB6934009EDF43 /* SellerViewController.swift */,
+				F56D8DEC1CCB6934009EDF43 /* ReciveViewController.swift */,
+				F56D8DEE1CCB6934009EDF43 /* RefundViewController.swift */,
+				F56D8DE91CCB6934009EDF43 /* LogisticInfoController.swift */,
+				F56D8DEA1CCB6934009EDF43 /* MyIndentController.swift */,
+			);
+			name = "Indent(订单)";
+			path = Indent;
+			sourceTree = "<group>";
+		};
+		F56D8DF81CCB69A6009EDF43 /* Indent(订单) */ = {
+			isa = PBXGroup;
+			children = (
+				F56D8DF91CCB69DB009EDF43 /* CircleView.swift */,
+				F56D8DFA1CCB69DB009EDF43 /* IndentFlowView.swift */,
+				F56D8DFB1CCB69DB009EDF43 /* LogisticInfoCell.swift */,
+				F56D8DFC1CCB69DB009EDF43 /* ShoppingListCell.swift */,
+			);
+			name = "Indent(订单)";
+			path = Indent;
+			sourceTree = "<group>";
+		};
+		F56D8E011CCB875E009EDF43 /* Indent */ = {
+			isa = PBXGroup;
+			children = (
+				F56D8E021CCB8AFC009EDF43 /* IndentModel.swift */,
+				F5B7314D1CCCB1F5005E23CC /* MyIndentModel.swift */,
+			);
+			path = Indent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -764,7 +835,7 @@
 				TargetAttributes = {
 					A920B19C1CB49EA800A6DA3F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 46XVCFLXXT;
+						DevelopmentTeam = 9BV68AZ7G4;
 					};
 					A920B1B01CB49EA800A6DA3F = {
 						CreatedOnToolsVersion = 7.3;
@@ -889,19 +960,25 @@
 				A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */,
 				A9756A591CCCA66700E10621 /* PersonalAdrCellNew.swift in Sources */,
 				A9594CBC1CC4C0C3008CE1DA /* LogoView.swift in Sources */,
+				F56D8DF11CCB6934009EDF43 /* MyIndentController.swift in Sources */,
 				A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */,
+				F56D8DF01CCB6934009EDF43 /* LogisticInfoController.swift in Sources */,
 				A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */,
 				A9323E831CB68F7400FE8E1C /* RegistViewController.swift in Sources */,
 				A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */,
 				A9E65B961CC24339009F8116 /* MTabBarController.swift in Sources */,
+				F56D8DFF1CCB69DB009EDF43 /* LogisticInfoCell.swift in Sources */,
 				A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */,
 				A94E0B731CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift in Sources */,
+				F56D8E001CCB69DB009EDF43 /* ShoppingListCell.swift in Sources */,
 				A9594CBA1CC4BDF3008CE1DA /* Line.swift in Sources */,
+				F56D8DF41CCB6934009EDF43 /* SellerViewController.swift in Sources */,
 				A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */,
 				A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */,
 				A9756A671CCCD2DD00E10621 /* PersonalAddressViewController.swift in Sources */,
 				A909C1EB1CBBBCB60062DA17 /* MColor.swift in Sources */,
 				A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */,
+				F56D8DEF1CCB6934009EDF43 /* IndentViewController.swift in Sources */,
 				A9594CB71CC4BBD4008CE1DA /* ExtensionUIImage.swift in Sources */,
 				A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */,
 				A9756A5B1CCCA90100E10621 /* PersonalAdrCellBtn.swift in Sources */,
@@ -911,29 +988,44 @@
 				A9756A541CCC9C5300E10621 /* PersonalAdrCellDefault.swift in Sources */,
 				A9323E7C1CB68F0000FE8E1C /* AppDelegate.swift in Sources */,
 				A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */,
+				F56D8DF71CCB698B009EDF43 /* ExtensionIndentView.swift in Sources */,
+				F56D8DFE1CCB69DB009EDF43 /* IndentFlowView.swift in Sources */,
 				A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */,
 				A9756A701CCCD31700E10621 /* PersonalModel.swift in Sources */,
 				A91FCE331CC8C8E70033305C /* ExtensionSwiftyJSON.swift in Sources */,
 				A909C1E91CBBBC6C0062DA17 /* MSize.swift in Sources */,
 				A918446C1CC5BF4700F1A0F8 /* Notify.swift in Sources */,
 				A9323E851CB68F8700FE8E1C /* LoginTextField.swift in Sources */,
+				F56D8DFD1CCB69DB009EDF43 /* CircleView.swift in Sources */,
+				F56D8DF31CCB6934009EDF43 /* ReciveViewController.swift in Sources */,
 				A9594CC11CC4CCDE008CE1DA /* RepassViewController.swift in Sources */,
 				A9E023F71CC617C7004A86B3 /* QRCodeViewController.swift in Sources */,
+				F56D8DF21CCB6934009EDF43 /* PayViewController.swift in Sources */,
 				A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */,
+<<<<<<< HEAD
 				A9756A6C1CCCD2F200E10621 /* FeedBackViewController.swift in Sources */,
 				A9756A711CCCD31700E10621 /* PersonalValidateModel.swift in Sources */,
 				A9756A691CCCD2E700E10621 /* PersonalInfoSettingViewController.swift in Sources */,
+=======
+				F5B7314E1CCCB1F5005E23CC /* MyIndentModel.swift in Sources */,
+>>>>>>> newChy
 				A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */,
 				A9C2BD231CC71CA7004181FF /* ExtensionButton.swift in Sources */,
 				A9E023FB1CC63549004A86B3 /* TestViewController.swift in Sources */,
 				A9594CC31CC4DB18008CE1DA /* ExtensionView.swift in Sources */,
 				A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */,
 				A94E0B7C1CCB50150033B0BE /* PersonalInfoCellHeader.swift in Sources */,
+				F56D8E031CCB8AFC009EDF43 /* IndentModel.swift in Sources */,
 				A9E023F91CC63402004A86B3 /* QRCodeWrapView.swift in Sources */,
 				A9594CBF1CC4C6AD008CE1DA /* MButton.swift in Sources */,
+<<<<<<< HEAD
 				A9756A571CCCA2FB00E10621 /* PersonalAddressNewViewController.swift in Sources */,
 				A9756A6D1CCCD2F200E10621 /* PersonalSettingViewController.swift in Sources */,
 				A9E0F57E1CCBB9B200DFE715 /* CommonTableViewAnimationProtocol.swift in Sources */,
+=======
+				F56D8DF51CCB6934009EDF43 /* RefundViewController.swift in Sources */,
+				A94E0B6A1CCB0B9A0033B0BE /* PersonalValidateModel.swift in Sources */,
+>>>>>>> newChy
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,6 +1169,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -1084,8 +1177,9 @@
 				INFOPLIST_FILE = dundun/Resources/plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.microali.dundun;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.microali.dundu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = dundun/AppDelegate/ObjectiveC_Bridging_Header.h;
 			};
 			name = Debug;
@@ -1096,6 +1190,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -1103,8 +1198,9 @@
 				INFOPLIST_FILE = dundun/Resources/plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.microali.dundun;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.microali.dundu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = dundun/AppDelegate/ObjectiveC_Bridging_Header.h;
 			};
 			name = Release;
