@@ -24,4 +24,12 @@ extension NSObject {
         dispatch_async(dispatch_queue_create(label, nil), void)
     }
     
+    func async_queue_after(time: Int, label: String, void: ()->Void) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(time)), dispatch_queue_create(label, nil), void)
+    }
+    
+    func async_main_after(time: Int, void: ()->Void) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(time)), dispatch_get_main_queue(), void)
+    }
+    
 }

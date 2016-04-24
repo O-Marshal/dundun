@@ -10,16 +10,14 @@ import Foundation
 
 class BaseModel: NSObject {
     
+    override init() {
+        super.init()
+    }
+    
     init(jsonString: String) {
         super.init()
-        let json = MJson.json(jsonString)
-        
-        if let jsonDict = json.dictionary {
-            for item in jsonDict {
-                setValue(item.1.rawValue, forKey: item.0)
-            }
-        }
-        
+        let dict = try! NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding)!, options: .MutableContainers)
+        setValuesForKeysWithDictionary(dict as! [String : AnyObject])
     }
     
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {

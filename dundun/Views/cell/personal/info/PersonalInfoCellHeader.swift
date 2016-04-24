@@ -37,6 +37,8 @@ class PersonalInfoCellHeader: UITableViewCell {
     func setImageString(img: String?) {
         if img != nil {
             imgView.kf_setImageWithURL(NSURL(string: img!)!, placeholderImage: UIImage(named: "user_defaultIcon"))
+        } else {
+            imgView.image = UIImage(named: "user_defaultIcon")
         }
     }
     

@@ -14,7 +14,7 @@ protocol PersonalInfoSettingViewControllerProtocol {
 }
 
 
-class PersonalInfoSettingViewController: BaseViewController {
+class PersonalInfoSettingViewController: BaseViewController, CommonTableViewAnimationProtocol {
     
     let tableView = UITableView()
     
@@ -46,6 +46,9 @@ class PersonalInfoSettingViewController: BaseViewController {
         touch.numberOfTapsRequired = 1
         touch.cancelsTouchesInView = false
         tableView.addGestureRecognizer(touch)
+        async_main_after(1) {
+            self.tableViewRelaod(true)
+        }
     }
     
     override func netSuccess(result: String, identifier: String?) {
@@ -83,7 +86,6 @@ extension PersonalInfoSettingViewController {
     
     func setImage(img: UIImage?) {
         self.img = img
-        tableView.reloadData()
     }
     
     func touchEvent() {

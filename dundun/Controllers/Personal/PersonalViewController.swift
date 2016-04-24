@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class PersonalViewController: BaseViewController {
+class PersonalViewController: BaseViewController, CommonTableViewAnimationProtocol {
     
     let tableView = UITableView()
     var model: PersonalModel?
@@ -42,6 +42,7 @@ class PersonalViewController: BaseViewController {
         tableView.registerClass(PersonalIndexTableViewCell.classForCoder(), forCellReuseIdentifier: "default")
         tableView.registerClass(PersonalIndexTableViewCellHeader.classForCoder(), forCellReuseIdentifier: "header")
         tableView.registerClass(PersonalIndexTableViewCellSgin.classForCoder(), forCellReuseIdentifier: "sign")
+        tableView.sectionHeaderHeight = 15
         loadData()
     }
     
@@ -51,8 +52,8 @@ class PersonalViewController: BaseViewController {
     
     override func netSuccess(result: String, identifier: String?) {
         model = PersonalModel(jsonString: result)
-        tableView.reloadData()
-//        print(model)
+        tableViewRelaod()
+        print(model)
     }
     
 }
@@ -74,6 +75,9 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
         case 2:// 实名认证等等
             return
         case 3:// 系统设置等
+            if indexPath.row == 0 {
+                showViewController(PersonalSettingViewController(), sender: nil)
+            }
             return
         default:
             return
@@ -106,10 +110,6 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
         return hv
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
-    }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 { return 80 }
         if indexPath.section == 1 { return 65 }
@@ -132,6 +132,7 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
             let menu = menus[indexPath.section - 2][indexPath.row]
             let line = menu == menus[0][2] || menu == menus[1][1] ? false : true
             cell.initView(menu.img, title: menu.title, line: line)
+            checkUserValidate(cell, indexPath: indexPath)
             return cell
         }
     }
@@ -139,6 +140,18 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
+// MARK: - 验证用户实名认证
+extension PersonalViewController {
+    func checkUserValidate(cell: PersonalIndexTableViewCell, indexPath: NSIndexPath) {
+        if (indexPath.section == 2 && indexPath.row == 0) {
+            if model?.vali?.idcard == nil {
+                print(model?.vali)
+                cell.setInfo("未认证")
+            }
+        }
+    }
+}
+// MARK: - 处理资料更新回调事件
 extension PersonalViewController: PersonalInfoSettingViewControllerProtocol {
     func onSuccess() {
         loadData()

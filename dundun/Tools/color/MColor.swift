@@ -31,6 +31,10 @@ class MColor {
     
     
     static let buttonDisableColor = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1)
+    
+    
+    
 
+    static let infoErrorColor = UIColor(red: 0.97, green: 0.38, blue: 0.38, alpha: 1)
     
 }

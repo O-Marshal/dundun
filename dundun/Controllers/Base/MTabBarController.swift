@@ -12,6 +12,8 @@ class MTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     var tabs: [String] = []
     
+    var personal = PersonalViewController()
+    
     override func viewDidLoad() {
         
         tabBar.tintColor = MColor.themeColor
@@ -23,7 +25,7 @@ class MTabBarController: UITabBarController, UITabBarControllerDelegate {
         addBarItems(WalletViewController(), img: "tab_wallet", title: "盾盾钱包")
         addBarItems(GoodsViewController(), img: "tab_shopping", title: "推荐商品")
         addBarItems(ActiveViewController(), img: "tab_active", title: "活动")
-        addBarItems(PersonalViewController(), img: "tab_person", title: "我的")
+        addBarItems(personal, img: "tab_person", title: "我的")
         
         delegate = self
         
@@ -40,5 +42,8 @@ class MTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         title = tabs[tabBarController.selectedIndex]
+        if tabBarController.selectedIndex == 3 {
+            personal.tableViewRelaod()
+        }
     }
 }

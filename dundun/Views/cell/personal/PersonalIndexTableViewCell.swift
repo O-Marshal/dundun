@@ -13,6 +13,7 @@ class PersonalIndexTableViewCell: UITableViewCell {
     
     let imgView = UIImageView()
     let labView = UILabel()
+    let infoView = UILabel()
     
     var needLine = false
     
@@ -27,8 +28,15 @@ class PersonalIndexTableViewCell: UITableViewCell {
         labView.font = UIFont(name: "Heiti SC", size: autoSize(15, max: 17))
         addSubview(imgView)
         addSubview(labView)
+        addSubview(infoView)
         
-        imgView.frame = CGRect(x: 10, y: 10, width: 100, height: 100)
+        infoView.textColor = MColor.infoErrorColor
+        infoView.font = UIFont(name: "Heiti SC", size: autoSize(13, max: 15))
+        
+    }
+    
+    func setInfo(info: String) {
+        infoView.text = info
     }
     
     override func didMoveToSuperview() {
@@ -40,6 +48,10 @@ class PersonalIndexTableViewCell: UITableViewCell {
         }
         labView.snp_makeConstraints { (make) in
             make.left.equalTo(imgView.snp_right).offset(20)
+            make.centerY.equalTo(self)
+        }
+        infoView.snp_makeConstraints { (make) in
+            make.right.equalTo(self).offset(-20)
             make.centerY.equalTo(self)
         }
         if needLine {
