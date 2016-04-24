@@ -7,3 +7,4 @@ pod ‘Alamofire’
 pod ‘Whisper’
 pod 'UMengAnalytics-NO-IDFA'
 pod ‘SwiftyJSON’
+pod 'Kingfisher'

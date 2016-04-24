@@ -36,5 +36,19 @@ extension UIView {
     var textfieldView: UITextField {
         return self as! UITextField
     }
+    
+    //wyxuan --add --画分割线
+    func cellLine(superView:UIView ,tag:Int, height:Int, color:UIColor) -> UIView{
+        let line = UIView()
+        line.backgroundColor = color
+        line.tag = tag
+        superView.addSubview(line)
+        //布局
+        line.snp_makeConstraints { (make) -> Void in
+            make.left.right.bottom.equalTo(superView)
+            make.height.equalTo(height)
+        }
+        return line
+    }
 
 }

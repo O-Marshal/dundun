@@ -20,7 +20,8 @@ class MTabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.shadowImage = UIImage()
         
         
-        addBarItems(WalletViewController(), img: "tab_wallet", title: "盾盾钱包")
+        //addBarItems(WalletViewController(), img: "tab_wallet", title: "盾盾钱包")
+        addBarItems(HomePageViewController(), img: "tab_wallet", title: "盾盾钱包")
         addBarItems(GoodsViewController(), img: "tab_shopping", title: "推荐商品")
         addBarItems(ActiveViewController(), img: "tab_active", title: "活动")
         addBarItems(PersonalViewController(), img: "tab_person", title: "我的")

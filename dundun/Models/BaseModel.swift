@@ -16,6 +16,8 @@ class BaseModel: NSObject {
         
         if let jsonDict = json.dictionary {
             for item in jsonDict {
+                print(item.1.rawValue)
+                print(item.0)
                 setValue(item.1.rawValue, forKey: item.0)
             }
         }
