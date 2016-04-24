@@ -106,6 +106,10 @@ extension PersonalInfoSettingViewController: UITableViewDataSource, UITableViewD
             })
             presentViewController(cameraViewController, animated: true, completion: nil)
         }
+        
+        if indexPath.section == 1 && indexPath.row == 0 {
+            showViewController(PersonalAddressViewController(), sender: nil)
+        }
     }
     
     

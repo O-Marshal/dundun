@@ -35,9 +35,6 @@ extension BaseViewController {
             self.result(response, identifier: identifier)
         })
     }
-    func postImageWithLogin() {
-        
-    }
     
     func postImageWithLogin(url: String, params: [String: AnyObject], identifier: String? = nil) {
         Alamofire.upload(.POST, url, multipartFormData: { (datas) in
@@ -74,10 +71,10 @@ extension BaseViewController {
             case -2: // 需要登录
                 self.netDelegate?.netErrorAuth()
             default :
-                self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: json["errMsg"].stringValue, identifier: identifier)
+                self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: json["errMsg"].description, identifier: identifier)
             }
         } else {
-            self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: "网络连接失败", identifier: identifier)
+            self.netDelegate?.netError(AlamofireResultType.Net, errorInfo: "网络连接失败", identifier: identifier)
         }
     }
     

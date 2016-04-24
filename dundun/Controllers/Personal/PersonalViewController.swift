@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SwiftyJSON
 
 class PersonalViewController: BaseViewController, CommonTableViewAnimationProtocol {
     
@@ -136,8 +137,6 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
     }
-    
-    
 }
 
 // MARK: - 验证用户实名认证
