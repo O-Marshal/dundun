@@ -74,7 +74,11 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:// 邀请签到
             return
         case 2:// 实名认证等等
-            return
+            if indexPath.row == 0 {
+//                showViewController(PersonalSettingViewController(), sender: nil)
+            } else if indexPath.row == 1 {
+                showViewController(MyIndentController(), sender: nil)
+            }
         case 3:// 系统设置等
             if indexPath.row == 0 {
                 showViewController(PersonalSettingViewController(), sender: nil)

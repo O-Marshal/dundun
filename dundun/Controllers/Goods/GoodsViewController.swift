@@ -10,6 +10,8 @@ import UIKit
 
 class GoodsViewController: BaseViewController {
     
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        showViewController(IndentViewController(), sender: nil)
+    }
 
 }
