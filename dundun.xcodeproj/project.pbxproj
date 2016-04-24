@@ -26,11 +26,14 @@
 		A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6C1CC9085C0045BE6D /* Size.swift */; };
 		A94A8E701CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */; };
 		A94A8E721CC9F5210045BE6D /* MJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94A8E711CC9F5210045BE6D /* MJson.swift */; };
+		A94E0B661CCAFFE20033B0BE /* PersonalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */; };
 		A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B671CCAFFF70033B0BE /* BaseModel.swift */; };
+		A94E0B6A1CCB0B9A0033B0BE /* PersonalValidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */; };
 		A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B6E1CCB12590033B0BE /* PersonalIndexTableViewCell.swift */; };
 		A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B701CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift */; };
 		A94E0B731CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B721CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift */; };
 		A94E0B751CCB27A40033B0BE /* MImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B741CCB27A40033B0BE /* MImage.swift */; };
+		A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B761CCB3E080033B0BE /* PersonalInfoSettingViewController.swift */; };
 		A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B791CCB4BF00033B0BE /* PersonalInfoCellTextField.swift */; };
 		A94E0B7C1CCB50150033B0BE /* PersonalInfoCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */; };
 		A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */; };
@@ -49,24 +52,13 @@
 		A9594CC31CC4DB18008CE1DA /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9594CC21CC4DB18008CE1DA /* ExtensionView.swift */; };
 		A9594CC61CC4F739008CE1DA /* Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9594CC51CC4F739008CE1DA /* Whisper.framework */; };
 		A95B967E1CC7758900D759E6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B967D1CC7758800D759E6 /* SwiftyJSON.framework */; };
-		A9756A541CCC9C5300E10621 /* PersonalAdrCellDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A531CCC9C5300E10621 /* PersonalAdrCellDefault.swift */; };
-		A9756A571CCCA2FB00E10621 /* PersonalAddressNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A561CCCA2FB00E10621 /* PersonalAddressNewViewController.swift */; };
-		A9756A591CCCA66700E10621 /* PersonalAdrCellNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A581CCCA66700E10621 /* PersonalAdrCellNew.swift */; };
-		A9756A5B1CCCA90100E10621 /* PersonalAdrCellBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A5A1CCCA90100E10621 /* PersonalAdrCellBtn.swift */; };
-		A9756A5D1CCCC88B00E10621 /* ViewControllerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A5C1CCCC88B00E10621 /* ViewControllerProtocols.swift */; };
-		A9756A601CCCCFAF00E10621 /* PersoanlAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A5F1CCCCFAF00E10621 /* PersoanlAddressModel.swift */; };
-		A9756A621CCCD08300E10621 /* PersonalAddressEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A611CCCD08300E10621 /* PersonalAddressEditViewController.swift */; };
-		A9756A671CCCD2DD00E10621 /* PersonalAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A661CCCD2DD00E10621 /* PersonalAddressViewController.swift */; };
-		A9756A691CCCD2E700E10621 /* PersonalInfoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A681CCCD2E700E10621 /* PersonalInfoSettingViewController.swift */; };
-		A9756A6C1CCCD2F200E10621 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A6A1CCCD2F200E10621 /* FeedBackViewController.swift */; };
-		A9756A6D1CCCD2F200E10621 /* PersonalSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A6B1CCCD2F200E10621 /* PersonalSettingViewController.swift */; };
-		A9756A701CCCD31700E10621 /* PersonalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A6E1CCCD31700E10621 /* PersonalModel.swift */; };
-		A9756A711CCCD31700E10621 /* PersonalValidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9756A6F1CCCD31700E10621 /* PersonalValidateModel.swift */; };
 		A9C2BD231CC71CA7004181FF /* ExtensionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C2BD221CC71CA7004181FF /* ExtensionButton.swift */; };
 		A9E023F71CC617C7004A86B3 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E023F61CC617C7004A86B3 /* QRCodeViewController.swift */; };
 		A9E023F91CC63402004A86B3 /* QRCodeWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E023F81CC63402004A86B3 /* QRCodeWrapView.swift */; };
 		A9E023FB1CC63549004A86B3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E023FA1CC63549004A86B3 /* TestViewController.swift */; };
 		A9E0F57E1CCBB9B200DFE715 /* CommonTableViewAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0F57D1CCBB9B200DFE715 /* CommonTableViewAnimationProtocol.swift */; };
+		A9E0F5801CCBC12800DFE715 /* PersonalSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0F57F1CCBC12800DFE715 /* PersonalSettingViewController.swift */; };
+		A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B641CC1C9CB009F8116 /* FeedBackViewController.swift */; };
 		A9E65B8D1CC24120009F8116 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9E65B8C1CC24120009F8116 /* Info.plist */; };
 		A9E65B911CC241DE009F8116 /* MWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B901CC241DE009F8116 /* MWindow.swift */; };
 		A9E65B941CC242E7009F8116 /* MNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E65B931CC242E7009F8116 /* MNavigationController.swift */; };
@@ -168,11 +160,14 @@
 		A94A8E6C1CC9085C0045BE6D /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		A94A8E6F1CC9A4F40045BE6D /* Alamofire_ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire_ExtensionViewController.swift; sourceTree = "<group>"; };
 		A94A8E711CC9F5210045BE6D /* MJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJson.swift; sourceTree = "<group>"; };
+		A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalModel.swift; sourceTree = "<group>"; };
 		A94E0B671CCAFFF70033B0BE /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalValidateModel.swift; sourceTree = "<group>"; };
 		A94E0B6E1CCB12590033B0BE /* PersonalIndexTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalIndexTableViewCell.swift; sourceTree = "<group>"; };
 		A94E0B701CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalIndexTableViewCellHeader.swift; sourceTree = "<group>"; };
 		A94E0B721CCB133B0033B0BE /* PersonalIndexTableViewCellSgin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalIndexTableViewCellSgin.swift; sourceTree = "<group>"; };
 		A94E0B741CCB27A40033B0BE /* MImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MImage.swift; sourceTree = "<group>"; };
+		A94E0B761CCB3E080033B0BE /* PersonalInfoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoSettingViewController.swift; sourceTree = "<group>"; };
 		A94E0B791CCB4BF00033B0BE /* PersonalInfoCellTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellTextField.swift; sourceTree = "<group>"; };
 		A94E0B7B1CCB50150033B0BE /* PersonalInfoCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellHeader.swift; sourceTree = "<group>"; };
 		A94E0B7D1CCB55400033B0BE /* PersonalInfoCellSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoCellSelect.swift; sourceTree = "<group>"; };
@@ -193,24 +188,13 @@
 		A95B96791CC765CA00D759E6 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa.framework"; sourceTree = "<group>"; };
 		A95B967A1CC765CA00D759E6 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Pods/../build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
 		A95B967D1CC7758800D759E6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../Library/Developer/Xcode/DerivedData/dundun-euvjiviiaawkoxdjjziofushyyra/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		A9756A531CCC9C5300E10621 /* PersonalAdrCellDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAdrCellDefault.swift; sourceTree = "<group>"; };
-		A9756A561CCCA2FB00E10621 /* PersonalAddressNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAddressNewViewController.swift; sourceTree = "<group>"; };
-		A9756A581CCCA66700E10621 /* PersonalAdrCellNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAdrCellNew.swift; sourceTree = "<group>"; };
-		A9756A5A1CCCA90100E10621 /* PersonalAdrCellBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAdrCellBtn.swift; sourceTree = "<group>"; };
-		A9756A5C1CCCC88B00E10621 /* ViewControllerProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocols.swift; sourceTree = "<group>"; };
-		A9756A5F1CCCCFAF00E10621 /* PersoanlAddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersoanlAddressModel.swift; sourceTree = "<group>"; };
-		A9756A611CCCD08300E10621 /* PersonalAddressEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAddressEditViewController.swift; sourceTree = "<group>"; };
-		A9756A661CCCD2DD00E10621 /* PersonalAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalAddressViewController.swift; sourceTree = "<group>"; };
-		A9756A681CCCD2E700E10621 /* PersonalInfoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfoSettingViewController.swift; sourceTree = "<group>"; };
-		A9756A6A1CCCD2F200E10621 /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
-		A9756A6B1CCCD2F200E10621 /* PersonalSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalSettingViewController.swift; sourceTree = "<group>"; };
-		A9756A6E1CCCD31700E10621 /* PersonalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalModel.swift; sourceTree = "<group>"; };
-		A9756A6F1CCCD31700E10621 /* PersonalValidateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalValidateModel.swift; sourceTree = "<group>"; };
 		A9C2BD221CC71CA7004181FF /* ExtensionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionButton.swift; sourceTree = "<group>"; };
 		A9E023F61CC617C7004A86B3 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		A9E023F81CC63402004A86B3 /* QRCodeWrapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeWrapView.swift; sourceTree = "<group>"; };
 		A9E023FA1CC63549004A86B3 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A9E0F57D1CCBB9B200DFE715 /* CommonTableViewAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewAnimationProtocol.swift; sourceTree = "<group>"; };
+		A9E0F57F1CCBC12800DFE715 /* PersonalSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalSettingViewController.swift; sourceTree = "<group>"; };
+		A9E65B641CC1C9CB009F8116 /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		A9E65B8C1CC24120009F8116 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9E65B901CC241DE009F8116 /* MWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWindow.swift; sourceTree = "<group>"; };
 		A9E65B931CC242E7009F8116 /* MNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNavigationController.swift; sourceTree = "<group>"; };
@@ -351,9 +335,6 @@
 		A91FBD721CCC629F00617935 /* user */ = {
 			isa = PBXGroup;
 			children = (
-				A9756A6E1CCCD31700E10621 /* PersonalModel.swift */,
-				A9756A6F1CCCD31700E10621 /* PersonalValidateModel.swift */,
-				A9756A5F1CCCCFAF00E10621 /* PersoanlAddressModel.swift */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -474,7 +455,6 @@
 		A94E0B6D1CCB11F70033B0BE /* personal */ = {
 			isa = PBXGroup;
 			children = (
-				A9756A521CCC9C3A00E10621 /* adr */,
 				A94E0B781CCB4BBA0033B0BE /* info */,
 				A94E0B6E1CCB12590033B0BE /* PersonalIndexTableViewCell.swift */,
 				A94E0B701CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift */,
@@ -527,46 +507,6 @@
 			path = btn;
 			sourceTree = "<group>";
 		};
-		A9756A521CCC9C3A00E10621 /* adr */ = {
-			isa = PBXGroup;
-			children = (
-				A9756A531CCC9C5300E10621 /* PersonalAdrCellDefault.swift */,
-				A9756A581CCCA66700E10621 /* PersonalAdrCellNew.swift */,
-				A9756A5A1CCCA90100E10621 /* PersonalAdrCellBtn.swift */,
-			);
-			path = adr;
-			sourceTree = "<group>";
-		};
-		A9756A551CCCA2CD00E10621 /* address(收货地址) */ = {
-			isa = PBXGroup;
-			children = (
-				A9756A661CCCD2DD00E10621 /* PersonalAddressViewController.swift */,
-				A9756A561CCCA2FB00E10621 /* PersonalAddressNewViewController.swift */,
-				A9756A611CCCD08300E10621 /* PersonalAddressEditViewController.swift */,
-			);
-			name = "address(收货地址)";
-			path = address;
-			sourceTree = "<group>";
-		};
-		A9756A641CCCD22600E10621 /* info(用户信息设置) */ = {
-			isa = PBXGroup;
-			children = (
-				A9756A681CCCD2E700E10621 /* PersonalInfoSettingViewController.swift */,
-			);
-			name = "info(用户信息设置)";
-			path = info;
-			sourceTree = "<group>";
-		};
-		A9756A651CCCD24500E10621 /* set(系统设置) */ = {
-			isa = PBXGroup;
-			children = (
-				A9756A6A1CCCD2F200E10621 /* FeedBackViewController.swift */,
-				A9756A6B1CCCD2F200E10621 /* PersonalSettingViewController.swift */,
-			);
-			name = "set(系统设置)";
-			path = set;
-			sourceTree = "<group>";
-		};
 		A9E023F51CC6179B004A86B3 /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,10 +527,10 @@
 		A9E65B631CC1C98D009F8116 /* Personal(个人中心) */ = {
 			isa = PBXGroup;
 			children = (
-				A9756A651CCCD24500E10621 /* set(系统设置) */,
-				A9756A641CCCD22600E10621 /* info(用户信息设置) */,
-				A9756A551CCCA2CD00E10621 /* address(收货地址) */,
+				A9E65B641CC1C9CB009F8116 /* FeedBackViewController.swift */,
 				A9E65BA01CC24A4D009F8116 /* PersonalViewController.swift */,
+				A9E0F57F1CCBC12800DFE715 /* PersonalSettingViewController.swift */,
+				A94E0B761CCB3E080033B0BE /* PersonalInfoSettingViewController.swift */,
 			);
 			name = "Personal(个人中心)";
 			path = Personal;
@@ -640,11 +580,16 @@
 			children = (
 <<<<<<< HEAD
 				A91FBD721CCC629F00617935 /* user */,
+<<<<<<< HEAD
 =======
 				DCF2C1621CCB86AE007D5196 /* Wallet */,
 				A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */,
 				A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */,
 >>>>>>> origin/master
+=======
+				A94E0B651CCAFFE20033B0BE /* PersonalModel.swift */,
+				A94E0B691CCB0B9A0033B0BE /* PersonalValidateModel.swift */,
+>>>>>>> parent of ff73344... 收货地址完成
 				A94E0B671CCAFFF70033B0BE /* BaseModel.swift */,
 				F56D8E011CCB875E009EDF43 /* Indent */,
 			);
@@ -776,7 +721,6 @@
 			isa = PBXGroup;
 			children = (
 				A9323E7E1CB68F5100FE8E1C /* ExtensionUIviewController.swift */,
-				A9756A5C1CCCC88B00E10621 /* ViewControllerProtocols.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1066,10 +1010,13 @@
 			buildActionMask = 2147483647;
 			files = (
 <<<<<<< HEAD
+<<<<<<< HEAD
 				A9756A601CCCCFAF00E10621 /* PersoanlAddressModel.swift in Sources */,
 =======
 				DCF2C14D1CCB7CC7007D5196 /* HomePageViewController.swift in Sources */,
 >>>>>>> origin/master
+=======
+>>>>>>> parent of ff73344... 收货地址完成
 				A9594CB41CC4B66C008CE1DA /* LoginViewController.swift in Sources */,
 				A9E65BA31CC24A7B009F8116 /* ActiveViewController.swift in Sources */,
 				DCF2C15C1CCB7D00007D5196 /* BillWithDetailTableViewCell.swift in Sources */,
@@ -1079,11 +1026,9 @@
 				DCF2C1471CCB7CB8007D5196 /* RechargeViewController.swift in Sources */,
 				A918C7271CC6608700E3F9A3 /* Timer.swift in Sources */,
 				A94A8E6D1CC9085C0045BE6D /* Size.swift in Sources */,
-				A9756A5D1CCCC88B00E10621 /* ViewControllerProtocols.swift in Sources */,
-				A9756A621CCCD08300E10621 /* PersonalAddressEditViewController.swift in Sources */,
 				A91FCE301CC8BB4C0033305C /* ExtensionString.swift in Sources */,
 				A9E65BA11CC24A4D009F8116 /* PersonalViewController.swift in Sources */,
-				A9756A591CCCA66700E10621 /* PersonalAdrCellNew.swift in Sources */,
+				A94E0B661CCAFFE20033B0BE /* PersonalModel.swift in Sources */,
 				A9594CBC1CC4C0C3008CE1DA /* LogoView.swift in Sources */,
 				F56D8DF11CCB6934009EDF43 /* MyIndentController.swift in Sources */,
 				A94E0B711CCB13240033B0BE /* PersonalIndexTableViewCellHeader.swift in Sources */,
@@ -1098,6 +1043,10 @@
 				DCF2C1661CCBA838007D5196 /* WalletHomeModel.swift in Sources */,
 				A9323E831CB68F7400FE8E1C /* RegistViewController.swift in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+				A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */,
+>>>>>>> parent of ff73344... 收货地址完成
 				A9E65B9D1CC24A04009F8116 /* WalletViewController.swift in Sources */,
 =======
 				A9E65B651CC1C9CB009F8116 /* FeedBackViewController.swift in Sources */,
@@ -1117,23 +1066,25 @@
 >>>>>>> chy
 				A9594CAB1CC3B6DE008CE1DA /* ExtensionNSObject_GCD.swift in Sources */,
 				A9E65B981CC247D7009F8116 /* BaseViewController.swift in Sources */,
-				A9756A671CCCD2DD00E10621 /* PersonalAddressViewController.swift in Sources */,
 				A909C1EB1CBBBCB60062DA17 /* MColor.swift in Sources */,
 				A9594CB21CC4B640008CE1DA /* LoginController.swift in Sources */,
 				F56D8DEF1CCB6934009EDF43 /* IndentViewController.swift in Sources */,
 				A9594CB71CC4BBD4008CE1DA /* ExtensionUIImage.swift in Sources */,
 				DCF2C1431CCB7CB8007D5196 /* CardBaseViewController.swift in Sources */,
 				A94E0B7E1CCB55400033B0BE /* PersonalInfoCellSelect.swift in Sources */,
-				A9756A5B1CCCA90100E10621 /* PersonalAdrCellBtn.swift in Sources */,
 				A9E65B9F1CC24A33009F8116 /* GoodsViewController.swift in Sources */,
 				A9323E7F1CB68F5100FE8E1C /* ExtensionUIviewController.swift in Sources */,
 				A94E0B751CCB27A40033B0BE /* MImage.swift in Sources */,
+<<<<<<< HEAD
 <<<<<<< HEAD
 				A9756A541CCC9C5300E10621 /* PersonalAdrCellDefault.swift in Sources */,
 =======
 				DCF2C1451CCB7CB8007D5196 /* CardDidBindingViewController.swift in Sources */,
 				A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */,
 >>>>>>> origin/master
+=======
+				A94E0B771CCB3E080033B0BE /* PersonalInfoSettingViewController.swift in Sources */,
+>>>>>>> parent of ff73344... 收货地址完成
 				A9323E7C1CB68F0000FE8E1C /* AppDelegate.swift in Sources */,
 				DCF2C1681CCBA873007D5196 /* WalletModelList.swift in Sources */,
 				A94E0B7A1CCB4BF00033B0BE /* PersonalInfoCellTextField.swift in Sources */,
@@ -1141,11 +1092,14 @@
 				F56D8DFE1CCB69DB009EDF43 /* IndentFlowView.swift in Sources */,
 				A94E0B681CCAFFF70033B0BE /* BaseModel.swift in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				A9756A701CCCD31700E10621 /* PersonalModel.swift in Sources */,
 =======
 				DCF2C1371CCB7CAD007D5196 /* BindingRecordViewController.swift in Sources */,
 				DCF2C1591CCB7D00007D5196 /* AdvertisementImagesView.swift in Sources */,
 >>>>>>> origin/master
+=======
+>>>>>>> parent of ff73344... 收货地址完成
 				A91FCE331CC8C8E70033305C /* ExtensionSwiftyJSON.swift in Sources */,
 				A909C1E91CBBBC6C0062DA17 /* MSize.swift in Sources */,
 				DCF2C14F1CCB7CC7007D5196 /* TestCardTableViewController.swift in Sources */,
@@ -1157,6 +1111,7 @@
 				A9E023F71CC617C7004A86B3 /* QRCodeViewController.swift in Sources */,
 				DCF2C1501CCB7CC7007D5196 /* WalletViewController.swift in Sources */,
 				A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */,
+<<<<<<< HEAD
 				A9756A6C1CCCD2F200E10621 /* FeedBackViewController.swift in Sources */,
 				A9756A711CCCD31700E10621 /* PersonalValidateModel.swift in Sources */,
 				A9756A691CCCD2E700E10621 /* PersonalInfoSettingViewController.swift in Sources */,
@@ -1169,6 +1124,8 @@
 				A94E0B6F1CCB12590033B0BE /* PersonalIndexTableViewCell.swift in Sources */,
 				F5B7314E1CCCB1F5005E23CC /* MyIndentModel.swift in Sources */,
 >>>>>>> chy
+=======
+>>>>>>> parent of ff73344... 收货地址完成
 				A94E0B801CCB5D490033B0BE /* PersonalInfoCellAddress.swift in Sources */,
 				DCF2C1391CCB7CAD007D5196 /* InvitationViewController.swift in Sources */,
 				DCF2C15B1CCB7D00007D5196 /* BillTableViewCell.swift in Sources */,
@@ -1185,8 +1142,13 @@
 				A9E023F91CC63402004A86B3 /* QRCodeWrapView.swift in Sources */,
 				A9594CBF1CC4C6AD008CE1DA /* MButton.swift in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				A9756A571CCCA2FB00E10621 /* PersonalAddressNewViewController.swift in Sources */,
 				A9756A6D1CCCD2F200E10621 /* PersonalSettingViewController.swift in Sources */,
+=======
+				A9E0F5801CCBC12800DFE715 /* PersonalSettingViewController.swift in Sources */,
+				A94E0B6A1CCB0B9A0033B0BE /* PersonalValidateModel.swift in Sources */,
+>>>>>>> parent of ff73344... 收货地址完成
 				A9E0F57E1CCBB9B200DFE715 /* CommonTableViewAnimationProtocol.swift in Sources */,
 =======
 				F56D8DF51CCB6934009EDF43 /* RefundViewController.swift in Sources */,

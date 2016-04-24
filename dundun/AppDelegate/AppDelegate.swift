@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        sleep(1)
+        sleep(1)
         MobClick.startWithAppkey("5714e901e0f55aa918001ac0", reportPolicy: BATCH, channelId: "")
         window = MWindow.defaultWindow
         return true
