@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (3.3.0)
+  - Alamofire (3.3.1)
   - ALCameraViewController (1.1.9)
-  - Kingfisher (2.2.0)
+  - Kingfisher (2.3.1)
   - SnapKit (0.20.0)
   - SwiftyJSON (2.3.2)
   - UMengAnalytics-NO-IDFA (3.6.7)
@@ -17,9 +17,9 @@ DEPENDENCIES:
   - Whisper
 
 SPEC CHECKSUMS:
-  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   ALCameraViewController: f171ffb7e84d211277a0f97823a2bda7418dc573
-  Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
+  Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
