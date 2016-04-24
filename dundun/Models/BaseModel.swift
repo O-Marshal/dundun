@@ -10,6 +10,10 @@ import Foundation
 
 class BaseModel: NSObject {
     
+    override init() {
+        super.init()
+    }
+    
     init(jsonString: String) {
         super.init()
         let json = MJson.json(jsonString)

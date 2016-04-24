@@ -10,6 +10,8 @@ import Foundation
 
 class PersonalValidateModel: BaseModel {
     
+    var idcard: String?
+    var name: String?
+    var time: String?
     
-
 }

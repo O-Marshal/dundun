@@ -10,19 +10,32 @@ import UIKit
 
 class PersonalIndexTableViewCellSgin: UITableViewCell {
     
+    private let box1 = PersonalIndexTableViewCellSginBoxView()
+    private let box2 = PersonalIndexTableViewCellSginBoxView()
+    
     func initView() {
-        
-        let box1 = PersonalIndexTableViewCellSginBoxView()
-        let box2 = PersonalIndexTableViewCellSginBoxView()
         
         box1.boxView("user_invite", title: "邀请").addTo(self)
         box2.boxView("user_sign", title: "签到").addTo(self)
+        
+    }
+    
+    override func didMoveToSuperview() {
+        if superview == nil { return }
         
         box1.snp_makeConstraints { (make) in
             make.width.equalTo(self).multipliedBy(0.5)
             make.centerY.equalTo(self)
             make.height.equalTo(40)
         }
+        let line = UIView().withBack(MColor.lineUserInfoColor).addTo(box1)
+        line.snp_makeConstraints { (make) in
+            make.right.equalTo(box1)
+            make.centerY.equalTo(box1)
+            make.height.equalTo(box1).multipliedBy(0.9)
+            make.width.equalTo(MSize.defaultSize.px(1))
+        }
+        
         box2.snp_makeConstraints { (make) in
             make.right.equalTo(self)
             make.width.equalTo(self).multipliedBy(0.5)

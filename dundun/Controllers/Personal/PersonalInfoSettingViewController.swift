@@ -7,11 +7,26 @@
 //
 
 import UIKit
+import ALCameraViewController
+
+protocol PersonalInfoSettingViewControllerProtocol {
+    func onSuccess()
+}
 
 
-class PersonalInfoSettingViewController: BaseViewController {
+class PersonalInfoSettingViewController: BaseViewController, CommonTableViewAnimationProtocol {
     
     let tableView = UITableView()
+    
+    var img: UIImage?
+    var nick: String?
+    var sex = 0
+    
+    
+    var delegate: PersonalInfoSettingViewControllerProtocol?
+    
+    let textFieldcell = PersonalInfoCellTextField()
+    let imageCell = PersonalInfoCellHeader()
     
     override func initView() {
         title = "个人资料"
@@ -27,16 +42,40 @@ class PersonalInfoSettingViewController: BaseViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        let touch = UITapGestureRecognizer(target: self, action: #selector(touchEvent))
+        touch.numberOfTapsRequired = 1
+        touch.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(touch)
+        async_main_after(1) {
+            self.tableViewRelaod(true)
+        }
+    }
+    
+    override func netSuccess(result: String, identifier: String?) {
+        Notify.show(Murmur: "资料更新成功", theme: NotiTheme.Success)
+        delegate?.onSuccess()
+        dismissEvent()
     }
     
 
 }
 
-// MARK: - 导航栏右键 -
 extension PersonalInfoSettingViewController {
     
     func upload() {
+        navigationItem.rightBarButtonItem?.enabled = false
+        navigationItem.rightBarButtonItem?.title = "提交中..."
         
+        var dict: [String: AnyObject] = [:]
+        if img != nil {
+            dict["headerImage"] = UIImagePNGRepresentation(img!.scaleToSize(CGSize(width: 100, height: 100)))
+        }
+        if nick != nil {
+            dict["nick"] = nick
+        }
+        dict["sex"] = sex
+        
+        postImageWithLogin("http://dundun.mog.name/userInfo/upload", params: dict)
     }
     
     func initRightBackBarButton() {
@@ -45,11 +84,29 @@ extension PersonalInfoSettingViewController {
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(autoSize(12, max: 14))], forState: .Normal)
     }
     
+    func setImage(img: UIImage?) {
+        self.img = img
+    }
+    
+    func touchEvent() {
+        textFieldcell.textField.resignFirstResponder()
+    }
+    
 }
 
 
 // MARK: - TbaleView -
 extension PersonalInfoSettingViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let cameraViewController = CameraViewController(croppingEnabled: true, allowsLibraryAccess: true, completion: { (image, _) in
+                self.setImage(image)
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
+            presentViewController(cameraViewController, animated: true, completion: nil)
+        }
+    }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,13 +138,13 @@ extension PersonalInfoSettingViewController: UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 1:
-            let cell = PersonalInfoCellTextField()
-            cell.initView()
-            return cell
+            textFieldcell.initView()
+            textFieldcell.setData(nick, delegate: self)
+            return textFieldcell
         case 2:
             let cell = PersonalInfoCellSelect()
             cell.initView()
-            cell.setData(0, delegate: self)
+            cell.setData( sex, delegate: self)
             return cell
         default:
             if indexPath.section == 1 {
@@ -95,18 +152,22 @@ extension PersonalInfoSettingViewController: UITableViewDataSource, UITableViewD
                 cell.initView()
                 return cell
             }
-            let cell = PersonalInfoCellHeader()
-            cell.initView()
-            return cell
+            imageCell.initView()
+            imageCell.setData(img)
+            return imageCell
         }
     }
-    
 }
 
+// MARK: - 男女选择代理
 extension PersonalInfoSettingViewController: PersonalInfoCellSelectProtocol {
-    
     func selectedItem(selected: Int) {
-        print(selected)
+        sex = selected
     }
-    
+}
+// MARK: - textfield代理事件
+extension PersonalInfoSettingViewController: PersonalInfoCellTextFieldProtocol {
+    func textChange(text: String?) {
+        nick = text
+    }
 }

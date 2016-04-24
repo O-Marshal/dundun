@@ -35,6 +35,35 @@ extension BaseViewController {
             self.result(response, identifier: identifier)
         })
     }
+    func postImageWithLogin() {
+        
+    }
+    
+    func postImageWithLogin(url: String, params: [String: AnyObject], identifier: String? = nil) {
+        Alamofire.upload(.POST, url, multipartFormData: { (datas) in
+            for param in params {
+                if param.1 is NSData {
+                    datas.appendBodyPart(data: param.1 as! NSData, name: param.0, fileName: param.0, mimeType: "image/*")
+                } else {
+                    datas.appendBodyPart(data: "\(param.1)".dataUsingEncoding(NSUTF8StringEncoding)!, name: param.0)
+                }
+            }
+            let userID: NSData = "\(LoginController.userInfo()["userID"]!)".dataUsingEncoding(NSUTF8StringEncoding)!
+            let userToken: NSData = "\(LoginController.userInfo()["userToken"]!)".dataUsingEncoding(NSUTF8StringEncoding)!
+            datas.appendBodyPart(data: userID, name: "userID")
+            datas.appendBodyPart(data: userToken, name: "userToken")
+            print(datas.boundary)
+            }) { (result) in
+                switch result {
+                case .Success(let upload, _, _):
+                    upload.responseData(completionHandler: { (response) in
+                        self.result(response, identifier: identifier)
+                    })
+                case .Failure( _):
+                    self.netDelegate?.netError(AlamofireResultType.Api, errorInfo: "网络连接失败", identifier: identifier)
+                }
+        }
+    }
     
     private func result(response: Response<NSData, NSError>, identifier: String?) {
         if let data = response.data {

@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol PersonalInfoCellTextFieldProtocol {
+    func textChange(text: String?)
+}
+
 class PersonalInfoCellTextField: UITableViewCell {
     
     let labView = UILabel()
     let textField = UITextField()
+    var delegate: PersonalInfoCellTextFieldProtocol?
+    
     
     func initView() {
         
@@ -24,6 +30,14 @@ class PersonalInfoCellTextField: UITableViewCell {
         
         textField.attributedPlaceholder = NSAttributedString(string: "请输入你的昵称", attributes: [NSFontAttributeName: UIFont(name: "Heiti SC", size: autoSize(16, max: 18))!, NSForegroundColorAttributeName: MColor.textPlacholderColor])
         addSubview(textField)
+        textField.addTarget(self, action: #selector(textChange(_:)), forControlEvents: .EditingChanged)
+    }
+    
+    func setData(text: String?, delegate: PersonalInfoCellTextFieldProtocol) {
+        if text != nil {
+            textField.text = text
+        }
+        self.delegate = delegate
     }
     
     override func didMoveToSuperview() {
@@ -40,5 +54,11 @@ class PersonalInfoCellTextField: UITableViewCell {
         
         Line.defaultLine(20, right: 0, color: MColor.lineUserInfoColor).addTo(self)
     }
+    
+    func textChange(textField: UITextField) {
+        delegate?.textChange(textField.text)
+    }
 
 }
+
+

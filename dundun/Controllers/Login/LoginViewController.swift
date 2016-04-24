@@ -18,6 +18,9 @@ class LoginViewController: BaseViewController {
     let phoTextField = LoginTextFieldGroup()
     let psdTextField = LoginTextFieldGroup()
     
+    var delegate: BaseViewController?
+    
+    
     override func initView() {
         initCommonNavBackItem("nav_close")
         title = "登录"
@@ -52,7 +55,7 @@ class LoginViewController: BaseViewController {
         print(json)
         LoginController.userSave(json["userId"].intValue, token: json["userToken"].stringValue)
         Notify.show(Murmur: "登录成功", theme: NotiTheme.Success)
-        print(LoginController.userInfo())
+        delegate?.loginSuccess()
         dismissEvent()
     }
     

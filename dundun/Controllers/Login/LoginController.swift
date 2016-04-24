@@ -10,8 +10,10 @@ import UIKit
 
 class LoginController {
 
-    class func login(viewController:UIViewController){
-        let controller = MNavigationController(rootViewController: LoginViewController())
+    class func login(viewController:BaseViewController){
+        let loginViewController = LoginViewController()
+        loginViewController.delegate = viewController
+        let controller = MNavigationController(rootViewController: loginViewController)
         viewController.presentViewController(controller, animated: true, completion: nil)
     }
     
