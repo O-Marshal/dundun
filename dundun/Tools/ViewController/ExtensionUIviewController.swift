@@ -40,6 +40,16 @@ extension UIViewController {
         scrollView.backgroundColor = MColor.themeColor
         view = scrollView
     }
+    
+    func changeScrollView(block: (scrollview: UIScrollView, wrapView: UIView) -> Void) {
+        let scrollView = UIScrollView(frame: UIScreen.mainScreen().bounds)
+        let  wrap = view
+        scrollView.addSubview(wrap)
+        scrollView.contentSize = CGSize(width: 0, height: 700)
+        scrollView.backgroundColor = MColor.themeColor
+        view = scrollView
+        block(scrollview: scrollView, wrapView: wrap)
+    }
 }
 
 //  事件相关
@@ -49,4 +59,10 @@ extension UIViewController {
         view.addSubview(targetView)
     }
     
+//    func presentViewController(viewController: UIViewController) {
+//        if navigationController == nil {
+//            presentViewController(viewController, animated: true, completion: nil)
+//        }
+//        navigationController?.presentViewController(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+//    }
 }

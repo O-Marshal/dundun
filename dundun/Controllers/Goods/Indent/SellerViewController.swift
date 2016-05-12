@@ -11,21 +11,22 @@ import UIKit
 class SellerViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate{
     var FooterLabel2: UILabel?
     var label2 : UILabel?
-    
+    var model = GoodsModel()
+    let tableView = UITableView()
      override func initView() {
             title = "订单支付"
             let colors = [blue, blue, blue, gray, themColor, themColor, gray]
             // 创建top的物流流程View 并赋予颜色 tag
             self.createIndentFlow(view, colors: colors, tag: 1003)
             // 创建物流信息View
-            self.createIndentInfo(view, numberss: "201006030201", totalss: amount, times: "2016.4.9")
+            self.createIndentInfo(view, numberss: numberss, totalss: amount, times: times)
             // 创建tableView
             self.createTableView()
             
             // 创建界面最下面的一个View
             let AffimView = self.createAffimView(view, tag: 2003)
             // 创建申请退款(右边)btn 点击并跳转退款界面
-            let rightView = createRightView(AffimView, rightTitle: "申请退款")
+            let rightView = createRightView(AffimView, rightTitle: "提醒发货")
             rightView.withAction(self, selector: #selector(SellerViewController.show))
             // 创建左边的代发货View
             creatLeftView(AffimView, leftTitle: "待发货", isCount: false, isBtn: false)
@@ -33,11 +34,19 @@ class SellerViewController: BaseViewController, UITableViewDataSource, UITableVi
 
     }
     func show () {
-        showViewController(ReciveViewController(), sender: nil)
+        let alert = UIAlertView.init(title: nil, message: "已提醒卖家发货", delegate: self, cancelButtonTitle: "确定")
+        alert.show()
+//        let recive = ReciveViewController()
+//        recive.mymodel = model
+//        
+//        showViewController(recive, sender: nil)
     }
     
+    func reload() {
+        tableView.reloadData()
+    }
     func createTableView(){
-        let tableView = UITableView()
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = bgColor
@@ -55,9 +64,10 @@ class SellerViewController: BaseViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = ShoppingListCell(style: .Value1, reuseIdentifier: "cell")
+        cell.setData(model)
         let storeName = cell.createStoreName()
         let detail = cell.createDetail(storeName, bgforeColor: bgColor)
-        cell.count(detail, isHiddenAddSub: true, totalCount: count!)
+        cell.count(detail, isHiddenAddSub: true, totalCount: count)
         cell.selectionStyle = .None
         return cell
     }
@@ -80,6 +90,7 @@ class SellerViewController: BaseViewController, UITableViewDataSource, UITableVi
         }
         let label1 = UILabel()
         label1.text = "合计:"
+        label1.font = labelFont
         label1.textAlignment = .Right
         leftView.addSubview(label1)
         label1.snp_makeConstraints { (make) in

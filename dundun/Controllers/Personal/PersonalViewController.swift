@@ -19,7 +19,7 @@ class PersonalViewController: BaseViewController, CommonTableViewAnimationProtoc
     
     let menus = [
         [
-            (img: "user_auth", title: "实名认证"),
+            (img: "user_shop", title: "我的收藏"),
             (img: "user_list", title: "我的订单"),
             (img: "user_safe", title: "账号安全")
         ],
@@ -44,17 +44,12 @@ class PersonalViewController: BaseViewController, CommonTableViewAnimationProtoc
         tableView.registerClass(PersonalIndexTableViewCellHeader.classForCoder(), forCellReuseIdentifier: "header")
         tableView.registerClass(PersonalIndexTableViewCellSgin.classForCoder(), forCellReuseIdentifier: "sign")
         tableView.sectionHeaderHeight = 15
-        loadData()
-    }
-    
-    func loadData() {
         postWithLogin("http://dundun.mog.name/userInfo", params: [:])
     }
     
     override func netSuccess(result: String, identifier: String?) {
         model = PersonalModel(jsonString: result)
-        tableViewRelaod()
-        print(model)
+        tableView.reloadData()
     }
     
 }
@@ -71,17 +66,22 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
             personalInfo.imageCell.setImageString(model?.header)
             personalInfo.delegate = self
             showViewController(personalInfo, sender: nil)
-        case 1:// 邀请签到
-            return
         case 2:// 实名认证等等
             if indexPath.row == 0 {
-//                showViewController(PersonalSettingViewController(), sender: nil)
+                showViewController(PersonalCollectionViewController(), sender: nil)
             } else if indexPath.row == 1 {
                 showViewController(MyIndentController(), sender: nil)
+            } else if indexPath.row == 2 {
+                showViewController(PersonalSafeInfoSettingViewController(), sender: nil)
             }
         case 3:// 系统设置等
             if indexPath.row == 0 {
                 showViewController(PersonalSettingViewController(), sender: nil)
+            } else {
+                let web = WebViewController()
+                web.url = "http://dundun.mog.name/share/help"
+                web.title = "帮助中心"
+                showViewController(web, sender: nil)
             }
             return
         default:
@@ -131,13 +131,13 @@ extension PersonalViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:// 邀请签到
             let cell = tableView.dequeueReusableCellWithIdentifier("sign") as! PersonalIndexTableViewCellSgin
             cell.initView()
+            cell.delegate = self
             return cell
         default:
             let cell = tableView.dequeueReusableCellWithIdentifier("default") as! PersonalIndexTableViewCell
             let menu = menus[indexPath.section - 2][indexPath.row]
             let line = menu == menus[0][2] || menu == menus[1][1] ? false : true
             cell.initView(menu.img, title: menu.title, line: line)
-            checkUserValidate(cell, indexPath: indexPath)
             return cell
         }
     }
@@ -157,6 +157,23 @@ extension PersonalViewController {
 // MARK: - 处理资料更新回调事件
 extension PersonalViewController: PersonalInfoSettingViewControllerProtocol {
     func onSuccess() {
-        loadData()
+        postWithLogin("http://dundun.mog.name/userInfo", params: [:])
     }
+}
+
+extension PersonalViewController: MButtonEventIdentifyDelegate {
+    func onTouchEvent(identify: String?) {
+        if identify == "invate" {
+            showViewController(PersonalInvateViewController(), sender: nil)
+        } else if identify == "sig" {
+            showViewController(PersonalSigViewController(), sender: nil)
+        }
+    }
+    func onTouchEvent(identify: String?, index: Int) {
+        
+    }
+}
+
+extension PersonalViewController: UMSocialUIDelegate {
+    
 }

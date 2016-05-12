@@ -14,9 +14,9 @@ let blue = UIColor.blueColor()
 let gray = UIColor.grayColor()
 let white = UIColor.whiteColor()
 let red = UIColor.redColor()
+let labelFont = UIFont.boldSystemFontOfSize(autoSize(12, max: 14))
 
-// 底部Btn文字大小
-var btnTitleFont =  UIFont.boldSystemFontOfSize(16)
+
 
 let grayClear =  UIColor(white: 0.8, alpha: 0.6)
 extension  NSObject {
@@ -51,6 +51,7 @@ extension  NSObject {
         }
         let number = UILabel()
         number.text = "订单编号:"
+        number.font = labelFont
         infoView.addSubview(number)
         number.snp_makeConstraints { (make) in
             make.top.equalTo(infoView).offset(15)
@@ -58,6 +59,7 @@ extension  NSObject {
         }
         let numbers = UILabel()
         numbers.text = numberss
+        numbers.font = labelFont
         infoView.addSubview(numbers)
         numbers.snp_makeConstraints { (make) in
             make.top.equalTo(infoView).offset(15)
@@ -65,12 +67,14 @@ extension  NSObject {
         }
         let total = UILabel()
         total.text = "订单总额:"
+        total.font = labelFont
         infoView.addSubview(total)
         total.snp_makeConstraints { (make) in
             make.bottom.equalTo(infoView).offset(-15)
             make.left.equalTo(infoView).offset(15)
         }
         let totals = UILabel()
+        totals.font = labelFont
         totals.textColor = red
         totals.text = totalss
         infoView.addSubview(totals)
@@ -80,6 +84,7 @@ extension  NSObject {
         }
         
         let createTime = UILabel()
+        createTime.font = labelFont
         createTime.text = "创建时间:"
         infoView.addSubview(createTime)
         createTime.snp_makeConstraints { (make) in
@@ -88,6 +93,7 @@ extension  NSObject {
         }
         let time = UILabel()
         time.text = times
+        time.font = labelFont
         infoView.addSubview(time)
         time.snp_makeConstraints { (make) in
             make.top.equalTo(number.snp_bottom).offset(22)
@@ -111,7 +117,7 @@ extension  NSObject {
     func createRightView(affimView: UIView?, rightTitle: String?) -> UIButton{
         let rightView = UIButton(type: .Custom)
         rightView.backgroundColor = themColor
-        rightView.titleLabel?.font = btnTitleFont
+        rightView.titleLabel?.font = labelFont
         rightView.setTitle(rightTitle, forState: .Normal)
         affimView!.addSubview(rightView)
         
@@ -125,14 +131,14 @@ extension  NSObject {
         return rightView
     }
     func creatLeftView(affimView: UIView?, leftTitle: String?, isCount: Bool, isBtn: Bool) -> UIView{
-       
+        
         if isBtn {
             let leftView = UIButton(type: .Custom)
             leftView.setTitleColor(themColor, forState: .Normal)
-            leftView.titleLabel?.font = btnTitleFont
+            leftView.titleLabel?.font = labelFont
             leftView.setTitle(leftTitle, forState: .Normal)
             leftView.backgroundColor = white
-
+            
             affimView!.addSubview(leftView)
             leftView.snp_makeConstraints { (make) in
                 make.left.equalTo(affimView!)
@@ -151,29 +157,30 @@ extension  NSObject {
             make.bottom.equalTo(affimView!)
             make.top.equalTo(affimView!)
         }
-       
+        
         let label1 = UILabel()
         label1.text = leftTitle
+        label1.font = labelFont
         label1.textAlignment = .Right
-            leftView.addSubview(label1)
-            if !isCount {
-                label1.snp_makeConstraints { (make) in
-                    make.top.equalTo(leftView).offset(15)
-                    make.centerX.equalTo(leftView.snp_centerX)
-                }
-                return label1
-            }
+        leftView.addSubview(label1)
+        if !isCount {
             label1.snp_makeConstraints { (make) in
                 make.top.equalTo(leftView).offset(15)
-make.right.equalTo(leftView.snp_centerX)
+                make.centerX.equalTo(leftView.snp_centerX)
             }
-            
+            return label1
+        }
+        label1.snp_makeConstraints { (make) in
+            make.top.equalTo(leftView).offset(15)
+            make.right.equalTo(leftView.snp_centerX)
+        }
+        
         
         let label2 = UILabel()
         leftView.addSubview(label2)
         label2.textAlignment = .Left
         label2.textColor = red
-        label2.text = "¥290.00"
+        label2.font = labelFont
         label2.snp_makeConstraints { (make) in
             make.top.equalTo(leftView).offset(15)
             make.left.equalTo(leftView.snp_centerX).offset(5)

@@ -16,8 +16,8 @@ class AdvertisemImageNameModel:NSObject {
         let adv =  AdvertisemImageNameModel()
         let json = MJson.json(jsonString)
         let jsonlist = json.array
-        let count = jsonlist?.count
-        for var i = 0 ; i<count ; i = i+1 {
+        let count = jsonlist?.count ?? 0
+        for i in 0..<count {
           adv.advertisemImageNames.append(jsonlist![i].string!)
         }
         return adv

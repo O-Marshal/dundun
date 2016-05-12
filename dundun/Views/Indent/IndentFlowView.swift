@@ -8,7 +8,7 @@
 
 import UIKit
 
-let labelFont = UIFont.boldSystemFontOfSize(18)
+//let labelFont = UIFont.boldSystemFontOfSize(18)
 class IndentFlowView: UIView {
     let themColor = UIColor(red: 0.4, green: 0.6, blue: 1, alpha: 1)
     var circleView = CircleView()
@@ -19,9 +19,6 @@ class IndentFlowView: UIView {
     var line1Color = UIColor()
     var line2Color = UIColor()
     var line3Color = UIColor()
-    
-    var labelFont = UIFont.boldSystemFontOfSize(15)
-    
     
     override func didMoveToSuperview() {
         if superview == nil { return }

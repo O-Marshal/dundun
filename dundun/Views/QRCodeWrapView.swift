@@ -11,7 +11,7 @@ import UIKit
 class QRCodeWrapView: UIView {
     
     override func drawRect(rect: CGRect) {
-        let frame = CGRect(x: self.frame.width / 2 - 125, y: 100, width: 250, height: 250)
+        let frame = CGRect(x: self.frame.width / 2 - 125, y: 150, width: 250, height: 250)
         UIColor(white: 0, alpha: 0).setFill()
         UIRectFill(frame)
     }

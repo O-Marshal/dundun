@@ -26,10 +26,6 @@ class PersonalAdrCellDefault: UITableViewCell {
         
         self.void = void
         
-        nameView.text = "啊实打实"
-        phoView.text = "123123123"
-        adrView.text = "三大快拉上你的老卡死卡了呢阿萨德那算快乐的"
-        
         nameView.font = UIFont.boldSystemFontOfSize(16)
         nameView.textColor = MColor.textHeaderColor
         

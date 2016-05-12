@@ -14,7 +14,14 @@ class MWindow: UIWindow {
     
     private init() {
         super.init(frame: MSize.defaultSize.frame)
-        rootViewController = MNavigationController(rootViewController: MTabBarController())
+        rootViewController = MNavigationController(rootViewController: MTabBarController.defaultTabBar)
+        let dundun = NSUserDefaults.standardUserDefaults()
+        let theFirst = dundun.boolForKey("app_first")
+        if !theFirst {
+            rootViewController = TheFirstViewController()
+        } else {
+            rootViewController = MNavigationController(rootViewController: MTabBarController.defaultTabBar)
+        }
         makeKeyAndVisible()
     }
     

@@ -21,7 +21,7 @@ class BaseModel: NSObject {
     }
     
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        print("没有这个属性: \(key)")
+//        print("没有这个属性: \(key)")
     }
     
     override var description: String {

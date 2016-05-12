@@ -56,6 +56,8 @@ class LoginViewController: BaseViewController {
         LoginController.userSave(json["userId"].intValue, token: json["userToken"].stringValue)
         Notify.show(Murmur: "登录成功", theme: NotiTheme.Success)
         delegate?.loginSuccess()
+        MTabBarController.defaultTabBar.wallet.postWithLogin("http://dundun.mog.name/wallet", params: [:])
+        MTabBarController.defaultTabBar.personal.postWithLogin("http://dundun.mog.name/userInfo", params: [:])
         dismissEvent()
     }
     

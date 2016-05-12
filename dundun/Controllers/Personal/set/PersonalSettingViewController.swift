@@ -13,6 +13,8 @@ class PersonalSettingViewController: BaseViewController, CommonTableViewAnimatio
     
     let tableView = UITableView()
     
+    var isLogin = false
+    
     let menus = [
         (img: "user_clean", title: "清除缓存"),
         (img: "user_feedback", title: "意见反馈"),
@@ -40,11 +42,54 @@ class PersonalSettingViewController: BaseViewController, CommonTableViewAnimatio
 
 }
 
+var rongLogin = false
+
 // MARK: - TbaleView -
 extension PersonalSettingViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        KingfisherManager.sharedManager.cache
+        if indexPath.row == 0 {
+            let cache = KingfisherManager.sharedManager.cache
+            cache.clearMemoryCache()
+            cache.clearDiskCache()
+            cache.cleanExpiredDiskCache()
+            cache.cleanExpiredDiskCacheWithCompletionHander({ 
+                cache.clearDiskCacheWithCompletionHandler({ 
+                    Notify.show(Murmur: "缓存清空成功", theme: NotiTheme.Success)
+                    tableView.reloadData()
+                })
+            })
+        } else if indexPath.row == 1 {
+            showViewController(FeedBackViewController(), sender: nil)
+        } else if indexPath.row == 2 {
+            if rongLogin {
+                let chat = MConversationViewController()
+                chat.conversationType = RCConversationType.ConversationType_PRIVATE
+                chat.targetId = "dundun-kefu"
+                chat.title = "盾盾客服"
+                showViewController(chat, sender: nil)
+            }
+            
+            if !isLogin {
+                isLogin = true
+                RCIM.sharedRCIM().connectWithToken("Zn79Hku+Psmu/8M9iRcoCvLvHUdchZ3xQqfLL8MieifpeJP/k5dCMzKDowcpSXVc7w9P6GKccH1AXqyxPakQvdRokOLwRV+R", success: { (userID) in
+                    rongLogin = true
+                    self.async_main({ 
+                        let chat = MConversationViewController()
+                        chat.conversationType = RCConversationType.ConversationType_PRIVATE
+                        chat.targetId = "dundun-kefu"
+                        chat.title = "盾盾客服"
+                        self.showViewController(chat, sender: nil)
+                    })
+                    }, error: { (status) -> Void in
+                        Notify.show(Murmur: "融云服务器登录失败,请稍后再试", theme: NotiTheme.Error)
+                    }, tokenIncorrect: {
+                        Notify.show(Murmur: "融云服务器登录失败,请稍后再试", theme: NotiTheme.Error)
+                })
+            }
+        } else if indexPath.row == 3 {
+            showViewController(PersonalAboutViewController(), sender: nil)
+        }
     }
     
     
@@ -66,7 +111,11 @@ extension PersonalSettingViewController: UITableViewDataSource, UITableViewDeleg
         let cell = tableView.dequeueReusableCellWithIdentifier("default") as! PersonalIndexTableViewCell
         cell.initView(menus[indexPath.row].img, title: menus[indexPath.row].title, line: indexPath.row != 3)
         if indexPath.row == 0 {
-            cell.setInfo("13.24M")
+            let cache = KingfisherManager.sharedManager.cache
+            // 获取硬盘缓存的大小
+            cache.calculateDiskCacheSizeWithCompletionHandler { (size) -> () in
+                cell.setInfo("\(String(format: "%.2f", Float(size / 1000) / 1000)) MB")
+            }
         }
         return cell
     }

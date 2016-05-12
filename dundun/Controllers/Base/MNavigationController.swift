@@ -21,6 +21,12 @@ class MNavigationController: UINavigationController {
         navbar.shadowImage = UIImage()
         navbar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         view.backgroundColor = UIColor.whiteColor()
+        
+        navbar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Heiti SC", size: 18)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return false
     }
     
 

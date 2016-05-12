@@ -86,6 +86,8 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/ALCameraViewController.framework"
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/DGElasticPullToRefresh.framework"
+  install_framework "Pods/Ji.framework"
   install_framework "Pods/Kingfisher.framework"
   install_framework "Pods/SnapKit.framework"
   install_framework "Pods/SwiftyJSON.framework"
@@ -94,6 +96,8 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/ALCameraViewController.framework"
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/DGElasticPullToRefresh.framework"
+  install_framework "Pods/Ji.framework"
   install_framework "Pods/Kingfisher.framework"
   install_framework "Pods/SnapKit.framework"
   install_framework "Pods/SwiftyJSON.framework"

@@ -25,5 +25,18 @@ extension String {
         return str.rangeOfString(astr)
     }
     
+    func split(separator: String) -> [String] {
+        return self.componentsSeparatedByString(separator)
+    }
+    
+    func sizeWithFont(font: UIFont?) -> CGSize {
+        return NSString(string: self).sizeWithAttributes([NSFontAttributeName: font!])
+    }
+    
+    func size(font: UIFont?, size: CGSize) -> CGSize {
+        let str = NSString(string: self)
+        return str.boundingRectWithSize(size, options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font!], context: nil).size
+    }
+    
 
 }

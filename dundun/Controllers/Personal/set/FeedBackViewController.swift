@@ -8,9 +8,13 @@
 
 import UIKit
 
-class FeedBackViewController: UIViewController {
+class FeedBackViewController: BaseViewController {
     
-    override func viewDidLoad() {
+    let textType = UITextField()
+    let textMsg = UITextView()
+    let textInfo = UITextField()
+    
+    override func initView() {
         initCommonNavBackItem()
         
         view.backgroundColor = MColor.backgroundColor
@@ -24,10 +28,11 @@ class FeedBackViewController: UIViewController {
         let label1 = UILabel().addTo(view).labelView
         let label2 = UILabel().addTo(view).labelView
         let label3 = UILabel().addTo(view).labelView
-        let textType = UITextField().addTo(view).textfieldView
-        let textMsg = UITextView().addTo(view).textfieldView
-        let textInfo = UITextField().addTo(view).textfieldView
         let btn = UIButton().addTo(view).btnView
+        
+        textType.addTo(view)
+        textMsg.addTo(view)
+        textInfo.addTo(view)
         
         let line1 = UIView().addTo(view)
         let line2 = UIView().addTo(view)
@@ -105,7 +110,18 @@ class FeedBackViewController: UIViewController {
             make.top.equalTo(wrapView.snp_bottom).offset(30)
         }
         
+        btn.withAction(self, selector: #selector(touchEvent))
+    }
+    
+    func touchEvent(sender: UIButton){
+        sender.enabled = false
+        postWithLogin("http://dundun.mog.name/userInfo/feedback", params: ["title": textType.text ?? "", "msg": textMsg.text ?? "", "info": textInfo.text ?? ""])
         
+    }
+    
+    override func netSuccess(result: String, identifier: String?) {
+        Notify.show(Murmur: "感谢您的宝贵意见，我们将及时处理您所反映的问题", theme: NotiTheme.Success)
+        dismissEvent()
     }
     
     func setLabels(labels: [UILabel]) {

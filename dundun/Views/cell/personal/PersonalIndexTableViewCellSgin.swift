@@ -10,11 +10,12 @@ import UIKit
 
 class PersonalIndexTableViewCellSgin: UITableViewCell {
     
+    var delegate: MButtonEventIdentifyDelegate?
+    
     private let box1 = PersonalIndexTableViewCellSginBoxView()
     private let box2 = PersonalIndexTableViewCellSginBoxView()
     
     func initView() {
-        
         box1.boxView("user_invite", title: "邀请").addTo(self)
         box2.boxView("user_sign", title: "签到").addTo(self)
         
@@ -42,6 +43,15 @@ class PersonalIndexTableViewCellSgin: UITableViewCell {
             make.centerY.equalTo(self)
         }
         
+        box1.withAction(self, selector: #selector(invate))
+        box2.withAction(self, selector: #selector(sig))
+    }
+    
+    func invate() {
+        delegate?.onTouchEvent("invate")
+    }
+    func sig() {
+        delegate?.onTouchEvent("sig")
     }
     
     

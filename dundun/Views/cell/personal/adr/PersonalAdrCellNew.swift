@@ -37,12 +37,14 @@ class PersonalAdrCellNew: UITableViewCell {
         
         let atrString = NSAttributedString(string: plach, attributes: [NSFontAttributeName: UIFont(name: "Heiti SC", size: autoSize(16, max: 18))!, NSForegroundColorAttributeName: MColor.textPlacholderColor])
         
+        textField.text = nil
         textField.attributedPlaceholder = atrString
         textField.addTarget(self, action: #selector(textChange(_:)), forControlEvents: .EditingChanged)
         textView.delegate = self
         
         textView.textAlignment = .Natural
         textView.attributedText = atrString
+        textView.text = nil
         
         addSubview(textField)
         addSubview(textView)

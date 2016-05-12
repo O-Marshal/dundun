@@ -76,7 +76,7 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
      */
     func netErrorAuth() {
         Notify.show(Murmur: "用户校验失败，需要登录", theme: NotiTheme.Warring)
-//        LoginController.login(self)
+        LoginController.login(self)
     }
     
     
@@ -92,12 +92,19 @@ class BaseViewController: UIViewController, UIViewControllerWithNetWorking {
     }
     /** 影藏键盘 */
     internal func dismissKeyBoard(mView: UIView){
-        if mView.isKindOfClass(UITextField) || mView.isKindOfClass(UITextView) {
+        if mView.isKindOfClass(UITextField) {
             (mView as! UITextField).resignFirstResponder()
+        }
+        if mView.isKindOfClass(UITextView) {
+            (mView as! UITextView).resignFirstResponder()
         }
         if mView.subviews.count == 0 { return }
         for subview in mView.subviews{
             dismissKeyBoard(subview)
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        print("\(classForCoder):当前控制器内存警告")
     }
 }

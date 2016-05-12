@@ -9,8 +9,11 @@
 import Foundation
 
 class MyIndentModel: NSObject {
-    public var good:String?
-    public var status:Int?
-    public var money:String?
+    var status:Int?
+    var money:String?
+    var orderid:String?
+    var time:String?
+    var goods:PersoanlAddressModel?
+    
     
 }

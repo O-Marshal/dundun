@@ -14,6 +14,11 @@ class PersonalAdrCellBtn: UITableViewCell {
     
     var void: (() -> Void)?
     
+    func setTitle(title: String) {
+        let title = NSAttributedString(string: title, attributes: [NSFontAttributeName: UIFont(name: "Heiti SC", size: autoSize(16, max: 18))!, NSForegroundColorAttributeName: UIColor.whiteColor()])
+        btn.setAttributedTitle(title, forState: .Normal)
+    }
+    
     func initView(void: (() -> Void)?) {
         
         selectionStyle = .None

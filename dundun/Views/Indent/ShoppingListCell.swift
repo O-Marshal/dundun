@@ -18,10 +18,11 @@ class ShoppingListCell: UITableViewCell{
     var nameLabel = UILabel()
     var countLabel:UILabel?
     var i = 1
-    var price: String?
+    var prices: Float = 0
     var howMuch = String()
     var delegate: totalProtocol?
-    public var model = MyIndentModel()
+    var model = MyIndentModel()
+    var models: GoodsModel?
     
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -68,6 +69,7 @@ class ShoppingListCell: UITableViewCell{
             refund.layer.borderWidth = 1
             refund.layer.cornerRadius = 3
         }
+        refund.withAction(self, selector: #selector(UIAlertView.show))
         contentView.addSubview(refund)
         refund.snp_makeConstraints { (make) in
             make.bottom.equalTo(contentView.snp_bottom).offset(-15)
@@ -88,6 +90,9 @@ class ShoppingListCell: UITableViewCell{
            
         }
         
+        
+    }
+    func show()  {
         
     }
     func addMargin() {
@@ -132,7 +137,7 @@ class ShoppingListCell: UITableViewCell{
         totalView.addSubview(label2)
         label2.textAlignment = .Left
         label2.textColor = red
-        label2.text = totalCount
+        label2.text = model.money
         label2.snp_makeConstraints { (make) in
             make.top.equalTo(totalView).offset(15)
             make.left.equalTo(label1.snp_right).offset(5)
@@ -144,8 +149,8 @@ class ShoppingListCell: UITableViewCell{
                     self.i = self.i + 1
                     self.countLabel?.text = "\(self.i)"
         
-                    let price = Double(self.price!)
-                    let sum = Double(self.i * Int.init(price!))
+                    let price = Double(self.prices)
+                    let sum = Double(self.i * Int.init(price))
                     self.howMuch = "¥\(sum)"
                     self.delegate!.changeTotal(self.howMuch,ints: self.i)
     }
@@ -155,8 +160,8 @@ class ShoppingListCell: UITableViewCell{
                         self.i = self.i - 1
                         self.countLabel?.text = "\(self.i)"
                         }
-                        let price = Double(self.price!)
-                        let sum = Double(self.i * Int.init(price!))
+                        let price = Double(self.prices)
+                        let sum = Double(self.i * Int.init(price))
                         self.howMuch = "¥\(sum)"
                         self.delegate!.changeTotal(self.howMuch ,ints: self.i)
     }
@@ -200,6 +205,7 @@ class ShoppingListCell: UITableViewCell{
         let counts = UILabel()
         view.addSubview(counts)
         counts.text = "购买数量"
+        counts.font = labelFont
         counts.snp_makeConstraints { (make) in
             make.left.equalTo(18)
             make.top.equalTo(10)
@@ -233,7 +239,8 @@ class ShoppingListCell: UITableViewCell{
             make.height.equalTo(50)
         }
         view.addSubview(nameLabel)
-        nameLabel.text = "香奈儿折扣店"
+        nameLabel.text = goodNamelabel.text
+        nameLabel.font = labelFont
         nameLabel.snp_makeConstraints { (make) in
             make.left.equalTo(18)
             make.top.equalTo(30)
@@ -249,9 +256,8 @@ class ShoppingListCell: UITableViewCell{
         view.snp_makeConstraints { (make) in
             make.top.equalTo(refrenceView!.snp_bottom).offset(10)
             make.width.equalTo(self.contentView)
-            make.height.equalTo(120)
+            make.height.equalTo(80 + hhh)
         }
-        let iconImageView = UIImageView()
         iconImageView.backgroundColor = white
         view.addSubview(iconImageView)
         iconImageView.snp_makeConstraints { (make) in
@@ -260,31 +266,55 @@ class ShoppingListCell: UITableViewCell{
             make.bottom.equalTo(view).offset(-10)
             make.width.equalTo(100)
         }
-        let goodNamelabel = UILabel()
         view.addSubview(goodNamelabel)
-        goodNamelabel.text = "香奈儿N5玫瑰香水"
         goodNamelabel.snp_makeConstraints { (make) in
             make.left.equalTo(iconImageView.snp_right).offset(20)
             make.top.equalTo(view).offset(20)
         }
-        let detailLabel = UILabel()
         view.addSubview(detailLabel)
-        detailLabel.text = "男士女士,持久淡香，正品特价"
         detailLabel.snp_makeConstraints { (make) in
             make.left.equalTo(iconImageView.snp_right).offset(20)
             make.top.equalTo(goodNamelabel.snp_bottom).offset(10)
+            make.height.equalTo(hhh)
+            make.right.equalTo(view)
         }
-        let price = UILabel()
-        view.addSubview(price)
-        price.text = "¥290.00"
-        self.price = "290.00"
-        price.textColor = UIColor.redColor()
-        price.snp_makeConstraints { (make) in
+        view.addSubview(priceView)
+        priceView.textColor = UIColor.redColor()
+        priceView.snp_makeConstraints { (make) in
             make.left.equalTo(iconImageView.snp_right).offset(20)
-            make.top.equalTo(detailLabel.snp_bottom).offset(20)
+            make.top.equalTo(detailLabel.snp_bottom).offset(10)
         }
         return view
     }
+    let iconImageView = UIImageView()
+    let priceView = UILabel()
+    let detailLabel = UILabel()
+    let goodNamelabel = UILabel()
+    var hhh = CGFloat()
+    
+    
+    func setData(Model: GoodsModel) {
+        priceView.text = "¥ \(Model.price)"
+        priceView.font = labelFont
+        self.prices = Model.price
+       
+        
+        detailLabel.text = Model.brief
+        detailLabel.font = labelFont
+        detailLabel.numberOfLines = 0
+        detailLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        let constraint = CGSize(width: contentView.frame.width, height: 10000.0)
+        
+        let size = NSString.init(string: Model.brief).boundingRectWithSize(constraint, options: .UsesLineFragmentOrigin, attributes: NSDictionary(object:UIFont.systemFontOfSize(12), forKey: NSFontAttributeName) as? [String : AnyObject], context: nil)
+        hhh = size.height
+        
+        
+        
+        goodNamelabel.text = Model.name
+        goodNamelabel.font = labelFont
+        iconImageView.kf_setImageWithURL(NSURL.init(string: Model.thumb)!)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

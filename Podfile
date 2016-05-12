@@ -5,7 +5,14 @@ use_frameworks!
 pod ‘SnapKit’
 pod ‘Alamofire’
 pod ‘Whisper’
-pod 'UMengAnalytics-NO-IDFA'
+pod ‘UMengAnalytics-NO-IDFA’
+pod ‘UMengSocial’
 pod ‘SwiftyJSON’
-pod 'ALCameraViewController'
-pod 'Kingfisher'
+pod ‘ALCameraViewController’
+pod ‘Kingfisher’
+pod ‘AMap2DMap’
+pod ‘AMapSearch’
+pod ‘AMapLocation’
+pod ‘Ji’
+pod ‘DGElasticPullToRefresh’
+pod ‘RongCloudIMKit’

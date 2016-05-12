@@ -21,6 +21,12 @@ extension UIView {
         return self
     }
     
+    func addTapEvent(target: AnyObject?, action: Selector) {
+        userInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        addGestureRecognizer(tap)
+    }
+    
     var imageView: UIImageView {
         return self as! UIImageView
     }
@@ -31,10 +37,6 @@ extension UIView {
     
     var labelView: UILabel {
         return self as! UILabel
-    }
-    
-    var textfieldView: UITextField {
-        return self as! UITextField
     }
 
 }

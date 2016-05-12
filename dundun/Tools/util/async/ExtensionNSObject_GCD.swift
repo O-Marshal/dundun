@@ -18,6 +18,13 @@ extension NSObject {
     }
     
     /**
+     同步队列
+     */
+    func sync_queue(label: String, void: ()->Void) {
+        dispatch_sync(dispatch_queue_create(label, nil), void)
+    }
+    
+    /**
      异步队列
      */
     func async_queue(label: String, void: ()->Void) {

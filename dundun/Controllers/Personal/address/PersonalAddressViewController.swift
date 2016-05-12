@@ -7,12 +7,17 @@
 //
 
 import UIKit
+protocol PersonalAddressViewControllerProtocol {
+    func onSelected(model: PersoanlAddressModel)
+}
 
 class PersonalAddressViewController: BaseViewController, CommonTableViewAnimationProtocol {
     
     let tableView = UITableView()
     
     var datas: [PersoanlAddressModel] = []
+    
+    var delegate: PersonalAddressViewControllerProtocol?
     
     override func initView() {
         title = "收货地址"
@@ -35,9 +40,7 @@ class PersonalAddressViewController: BaseViewController, CommonTableViewAnimatio
     
     override func netSuccess(result: String, identifier: String?) {
         if let dict = MJson.json(result).array {
-            for item in dict {
-                datas.append(PersoanlAddressModel(jsonString: item.description))
-            }
+            datas += dict.map({ PersoanlAddressModel(jsonString: $0.description) })
             tableViewRelaod()
         }
     }
@@ -61,6 +64,13 @@ extension PersonalAddressViewController {
 
 // MARK: - TbaleView -
 extension PersonalAddressViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let sel = delegate {
+            sel.onSelected(datas[indexPath.section])
+            dismissEvent()
+        }
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

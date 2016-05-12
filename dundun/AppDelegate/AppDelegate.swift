@@ -16,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 //        sleep(1)
-        MobClick.startWithAppkey("5714e901e0f55aa918001ac0", reportPolicy: BATCH, channelId: "")
+        MobClick.startWithAppkey(UMKey, reportPolicy: BATCH, channelId: "")
+        UMSocialData.setAppKey(UMKey)
+        UMSocialWechatHandler.setWXAppId(WXKey, appSecret: WXSecrect, url: UMShareUrl)
+        UMSocialQQHandler.setQQWithAppId(QQID, appKey: QQKey, url: UMShareUrl)
+        UMSocialSinaSSOHandler.openNewSinaSSOWithAppKey(WBKey, secret: WBSecrect, redirectURL: "http://dundun.mog.name/weibo")
+        AMapSearchServices.sharedServices().apiKey = "2de9c4dedb34631586c1b20bd516984e"
+        
+        // 融云
+        RCIM.sharedRCIM().initWithAppKey("x4vkb1qpvdfyk")
+        
         window = MWindow.defaultWindow
         return true
     }
@@ -42,7 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        let result = UMSocialSnsService.handleOpenURL(url)
+        return result
+    }
 }
 

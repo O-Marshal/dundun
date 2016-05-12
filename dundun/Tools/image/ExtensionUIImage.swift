@@ -25,7 +25,7 @@ extension UIImage {
         return newImage
     }
     
-    func image(color: UIColor, backgroundColor: UIColor) -> UIImage? {
+    func image(color: UIColor, backgroundColor: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
         let context = UIGraphicsGetCurrentContext()
         CGContextTranslateCTM(context, 0, self.size.height)
@@ -40,6 +40,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage
     }
+    
     
     func scaleToSize(size: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size)

@@ -1,28 +1,53 @@
 PODS:
-  - Alamofire (3.3.1)
-  - ALCameraViewController (1.1.9)
-  - Kingfisher (2.3.1)
+  - Alamofire (3.4.0)
+  - ALCameraViewController (1.2.0)
+  - AMap2DMap (3.3.0)
+  - AMapLocation (1.2.2)
+  - AMapSearch (3.3.0)
+  - DGElasticPullToRefresh (1.0.3)
+  - Ji (1.2.0):
+    - Ji/Ji (= 1.2.0)
+  - Ji/Ji (1.2.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (1.2.0)
+  - Kingfisher (2.4.0)
+  - RongCloudIMKit (2.5.0)
   - SnapKit (0.20.0)
   - SwiftyJSON (2.3.2)
   - UMengAnalytics-NO-IDFA (3.6.7)
-  - Whisper (2.1)
+  - UMengSocial (5.0)
+  - Whisper (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - ALCameraViewController
+  - AMap2DMap
+  - AMapLocation
+  - AMapSearch
+  - DGElasticPullToRefresh
+  - Ji
   - Kingfisher
+  - RongCloudIMKit
   - SnapKit
   - SwiftyJSON
   - UMengAnalytics-NO-IDFA
+  - UMengSocial
   - Whisper
 
 SPEC CHECKSUMS:
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  ALCameraViewController: f171ffb7e84d211277a0f97823a2bda7418dc573
-  Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  ALCameraViewController: 03b480d0b41d3afc21fca48fc45345893ce2680a
+  AMap2DMap: e53461cdc345375e514579db17dbd721ff9ed9eb
+  AMapLocation: 5412fbf0385716d4d481e39a95929057cddc093f
+  AMapSearch: cff4faf59c007f7d1f2bae2d7170c3912783981a
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  Ji: ddebb22f9ac445db6e884b66f78ea74fb135fdb7
+  Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
+  RongCloudIMKit: 3d8473f022c7588db80ef81caf0208e5c2fa4789
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UMengAnalytics-NO-IDFA: 6d02561a00579b2e37718f204eb81347df5d7b8b
-  Whisper: 18b574de21a089c0d664b115f26e0d9ccbbadbab
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
+  Whisper: 42a3ee7c2936f861b23d41bd6cd7dfd22f102405
 
 COCOAPODS: 0.39.0

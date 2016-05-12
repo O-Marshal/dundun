@@ -9,7 +9,7 @@
 import UIKit
 
 class ReciveViewController: SellerViewController {
-    
+    var mymodel = GoodsModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         // 因为是继承卖家发货界面的控制器,所以得先移除不要的控件
@@ -19,6 +19,7 @@ class ReciveViewController: SellerViewController {
             }
             
         }
+        self.tableView.reloadData()
         
         let colors = [blue, blue, blue, blue, themColor, themColor, themColor]
         self.createIndentFlow(view, colors: colors, tag: 104)
@@ -33,6 +34,15 @@ class ReciveViewController: SellerViewController {
         // 查看物流btn
         let leftBtn = creatLeftView(affimView, leftTitle: "查看物流", isCount: false, isBtn: true) as? UIButton
         leftBtn?.withAction(self, selector: #selector(ReciveViewController.shows))
+    }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = ShoppingListCell(style: .Value1, reuseIdentifier: "cell")
+        cell.setData(mymodel)
+        let storeName = cell.createStoreName()
+        let detail = cell.createDetail(storeName, bgforeColor: bgColor)
+        cell.count(detail, isHiddenAddSub: true, totalCount: count)
+        cell.selectionStyle = .None
+        return cell
     }
     func shows() {
         showViewController(LogisticInfoController(), sender: nil)

@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+var numberss = String()
+var times = String()
 class PayViewController: BaseViewController {
     
     let black = UIColor.blackColor()
-    public var numberss = String()
-    public var times = String()
+    
+     var model = GoodsModel()
     
     override func initView() {
         title = "订单支付"
@@ -27,7 +28,8 @@ class PayViewController: BaseViewController {
     func payBtn()  {
         let payBtn = UIButton(type: .Custom)
         payBtn.backgroundColor = themColor
-        payBtn.setTitle("立即支付", forState: .Normal)
+        payBtn.setTitle("货到付款", forState: .Normal)
+        payBtn.titleLabel?.font = labelFont
         view.addSubview(payBtn)
         payBtn.snp_makeConstraints { (make) in
             make.top.equalTo(view).offset(100 + 140 + 250 + 30)
@@ -42,8 +44,12 @@ class PayViewController: BaseViewController {
         postWithLogin("http://dundun.mog.name/order/pay", params: ["orderid" : numberss])
        
     }
+    //  支付成功
     override func netSuccess(result: String, identifier: String?) {
-         showViewController(SellerViewController(), sender: nil)
+        
+        let indent = MyIndentController()
+        showViewController(indent, sender: nil)
+        
     }
     override func netError(errorType: AlamofireResultType, errorInfo: String, identifier: String?) {
         print("支付失败")
@@ -71,6 +77,7 @@ class PayViewController: BaseViewController {
         }
         let label = UILabel()
         label.text = "请选择支付方式"
+        label.font = labelFont
         header.addSubview(label)
         label.snp_makeConstraints { (make) in
             make.top.equalTo(header).offset(10)

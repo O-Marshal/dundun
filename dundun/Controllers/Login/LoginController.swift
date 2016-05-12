@@ -31,8 +31,8 @@ class LoginController {
      */
     class func userInfo() -> [String: AnyObject] {
         let user = NSUserDefaults.standardUserDefaults()
-        let userID = user.integerForKey("userId")
-        let userToken: String = user.stringForKey("userToken")!
+        let userID = user.integerForKey("userId") ?? 0
+        let userToken: String = user.stringForKey("userToken") ?? ""
         return ["userID": userID, "userToken": userToken]
     }
     

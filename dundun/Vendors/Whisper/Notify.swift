@@ -40,7 +40,7 @@ class Notify {
      - parameter theme:          主题：成功，提醒， 警告， 错误
      */
     class func show(Murmur title: String, theme: NotiTheme) {
-        let murmur = Murmur(title: title, duration: 2, backgroundColor: getBackgroundColor(theme), titleColor: getTextColor(theme), font: UIFont(name: "Oriya Sangam MN", size: 10)!)
+        let murmur = Murmur(title: title, backgroundColor: getBackgroundColor(theme), titleColor: getTextColor(theme), font: UIFont(name: "Oriya Sangam MN", size: 10)!)
         Whistle(murmur)
     }
     

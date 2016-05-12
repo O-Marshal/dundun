@@ -9,10 +9,14 @@
 import UIKit
 
 
-class IndentViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate,totalProtocol {
+class IndentViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate,totalProtocol,PersonalAddressViewControllerProtocol {
     
     var label2: UILabel?
     var FooterLabel2: UILabel?
+    
+    var model = GoodsModel()
+    var addressModel = PersoanlAddressModel()
+    var tableView = UITableView()
     
     override func initView() {
         title = "确认订单"
@@ -28,31 +32,26 @@ class IndentViewController: BaseViewController, UITableViewDataSource, UITableVi
         rightView.withAction(self, selector: #selector(IndentViewController.show))
         
         label2 = creatLeftView(AffimView, leftTitle: "合计:", isCount: true, isBtn: false).labelView
+        label2?.text = "¥ \(model.price)"
     }
     
     // 确认订单的操作
     func show() {
-        postWithLogin("http://dundun.mog.name/order/create", params: ["gid" : 18, "aid" : 1, "num" : count!, "money" : 180 * count!])
+        postWithLogin("http://dundun.mog.name/order/create", params: ["gid" : model.pid, "aid" : (model.id), "num" : count, "money" : (model.price).intValue * count])
     }
     // 请求成功
     override func netSuccess(result: String, identifier: String?) {
-       
+        
         let pay = PayViewController()
-        pay.numberss = MJson.json(result)["orderid"].stringValue
-        pay.times = MJson.json(result)["time"].stringValue
-
+        numberss = MJson.json(result)["orderid"].stringValue
+        times = MJson.json(result)["time"].stringValue
+        pay.model = model
         showViewController(pay, sender: nil)
-   
+        
     }
-    // 请求失败
-    override func netError(errorType: AlamofireResultType, errorInfo: String, identifier: String?) {
-        print("error")
-    }
-    
-    
     
     func createTableView()  {
-        let tableView = UITableView(frame: CGRectZero, style: .Grouped)
+        tableView = UITableView(frame: CGRectZero, style: .Grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = bgColor
@@ -67,21 +66,42 @@ class IndentViewController: BaseViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
-            let cell = UITableViewCell(style: .Value1, reuseIdentifier: "cell")
-            cell.accessoryType = .DisclosureIndicator
-            cell.textLabel?.text = "添加收货地址"
-            cell.selectionStyle = .None
+            let address = PersonalAddressViewController()
+            address.delegate = self
+           showViewController(address, sender: nil)
+        }
+    }
+    func onSelected(model: PersoanlAddressModel) {
+        addressModel = model
+        tableView.reloadData()
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            if addressModel.pho == nil {
+                let cell = UITableViewCell(style: .Value1, reuseIdentifier: "cell")
+                cell.accessoryType = .DisclosureIndicator
+                cell.textLabel?.text = "选择收货地址"
+                cell.textLabel?.font = labelFont
+                cell.selectionStyle = .None
+                return cell
+            }
+            let cell = AddressCell()
+            cell.setdata(addressModel)
+            cell.createSunviews()
             return cell
+            
+            
         }
         
         let cell = ShoppingListCell(style: .Value1, reuseIdentifier: "cell")
+         cell.setData(model)
         let storeName = cell.createStoreName()
         let detail = cell.createDetail(storeName, bgforeColor: bgColor)
-        cell.count(detail, isHiddenAddSub: false, totalCount: count!)
+       
+        cell.count(detail, isHiddenAddSub: false, totalCount: count)
         cell.delegate = self;
         // 添加cell之间的间距
         cell.addMargin()
@@ -98,7 +118,7 @@ class IndentViewController: BaseViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView()
         footerView.backgroundColor = UIColor.whiteColor()
-       
+        
         let leftView = UIView()
         leftView.backgroundColor = white
         footerView.addSubview(leftView)
@@ -110,6 +130,7 @@ class IndentViewController: BaseViewController, UITableViewDataSource, UITableVi
         }
         let label1 = UILabel()
         label1.text = "合计:"
+        label1.font = labelFont
         label1.textAlignment = .Right
         leftView.addSubview(label1)
         label1.snp_makeConstraints { (make) in
@@ -120,8 +141,10 @@ class IndentViewController: BaseViewController, UITableViewDataSource, UITableVi
         self.FooterLabel2 = label2
         leftView.addSubview(label2)
         label2.textAlignment = .Left
+        label2.font = labelFont
         label2.textColor = red
-        label2.text = "¥290.00"
+        amount = "\(model.price)"
+        label2.text = "¥ \(model.price)"
         label2.snp_makeConstraints { (make) in
             make.top.equalTo(leftView).offset(15)
             make.left.equalTo(label1.snp_right).offset(5)
@@ -133,21 +156,17 @@ class IndentViewController: BaseViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
- 
+    
     func changeTotal(total: String?, ints: Int) {
         self.label2?.text = total
         self.FooterLabel2?.text = total
         amount = total!
         count = ints
     }
-   
+    
 }
 
 
 // 对IndentViewController的扩展
- var amount = String()
- var count = Int.init("0")
-
-extension UIViewController{
-
-}
+var amount = ""
+var count = 0

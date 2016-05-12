@@ -8,6 +8,8 @@
 
 import UIKit
 
+// 特细的字体：Oriya Sangam MN | Savoye LET | Khmer Sangam MN | Lao Sangam MN | Heiti TC | Heiti SC
+
 /// 公共尺寸
 class MSize {
     
